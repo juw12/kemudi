@@ -1,0 +1,32 @@
+name: reproduce
+
+# The full measurement on a second machine. Started by hand; it takes hours.
+on:
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e .
+      - name: Machine
+        run: |
+          lscpu | grep -E "Model name|^CPU\(s\)|Flags" | cut -c1-200
+          python -c "import torch, platform; print(platform.platform(), torch.__version__, torch.get_num_threads())"
+      - name: Reproduce
+        run: kemudi reproduce --calibration fresh/calibration --out fresh/docs
+      - name: Compare with the shipped numbers
+        run: python tools/compare_reproduce.py fresh/calibration | tee fresh/comparison.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reproduce
+          path: fresh
