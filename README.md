@@ -27,8 +27,9 @@ of what it does to the text and the dose at which the text breaks.
 On Windows, double-click `Start Kemudi.cmd`. On macOS or Linux, run `./start-kemudi.sh`. The
 first start installs Python packages and downloads the model once (about 1.3 GB together), then
 opens the app in your browser. The Windows script was run from a fresh clone on
-Windows 10 with the model already on disk. The shell script does the same steps; the tests
-check its syntax on Linux, and it has not been run on a Mac.
+Windows 10 with the model already on disk. The shell script is run by CI on Linux and on macOS
+at every push: a fresh machine installs, downloads the model, the app answers and a steered
+sentence is written.
 
 By hand, on any system with Python 3.10 or newer:
 
@@ -169,8 +170,30 @@ Read with the intervals, the claims get smaller:
   interval at dose 0 (0.49 to 0.53). Only the two ends are clear of each other.
 - **speech**: the interval at the usable high end (0.00 to 0.11) includes the dose-0 value of 0.
 
-These are intervals of each mean on its own. The texts are paired (same opening and same seed
-at every dose), and no paired test was run.
+Those are intervals of each mean on its own. Every dose used the same 16 openings and the same
+seed, so the fairer comparison is per opening: the change from dose 0 at each usable end, with
+a 95% bootstrap interval over the 16 changes. This check was added after the measurement
+(`python tools/paired_check.py`). It scores the stored texts again and first confirms that it
+gets the stored means back.
+
+<!-- paired:start -->
+| Axis | Dose | Mean change from dose 0 | 95% interval of the change | Openings that moved the intended way |
+|---|---|---|---|---|
+| mood | -0.30 | -0.187 | -0.257 to -0.128 | 15 of 16 |
+| mood | +0.45 | +0.149 | +0.066 to +0.220 | 15 of 16 |
+| tension | -0.30 | -0.063 | -0.095 to -0.037 | 15 of 16 |
+| tension | +0.15 | +0.060 | +0.026 to +0.095 | 13 of 16 |
+| register | -0.15 | -0.026 | -0.048 to -0.009 | 14 of 16 |
+| register | +0.15 | +0.032 | +0.017 to +0.050 | 14 of 16 |
+| speech | -0.45 | +0.000 | +0.000 to +0.000 | 0 of 16 |
+| speech | +0.15 | +0.042 | +0.000 to +0.110 | 3 of 16 |
+<!-- paired:end -->
+
+Per opening, mood, tension and register move the intended way at both usable ends, and none of
+those six intervals includes zero. Register's change is small, about 0.03 on the 0 to 1 scale.
+Speech shows no change inside its usable range: nothing at -0.45, and at +0.15 only 3 of 16
+openings gain dialogue and the interval starts at zero. These are eight comparisons, with no
+correction for making eight of them.
 
 ### The same opening at three doses
 
@@ -255,6 +278,8 @@ Changed on the way, in order:
   the rule "use it if it reaches 0.9 on all three knobs", and it did. No steered text was
   involved in that choice.
 - **The echo count** above was added after the results, as said there.
+- **The dose table and the paired check** were added after the results, to state the
+  uncertainty as numbers. They changed no rule and no number in the results table.
 - **How the runs were made.** To save time, mood and tension were measured in one process and
   speech and register in a second one, with the same code, seed and settings. The second
   process worked on a copy of the calibration, and its speech entry was merged in after
@@ -339,7 +364,8 @@ pytest
 
 The tests run without the model: fake engines stand in for it, and one test checks that the
 results table, the dose table, the sample texts and the echo count in this README are exactly
-what the shipped calibration produces. `python tools/mutation_check.py` breaks the code in six places on a copy
+what the shipped calibration produces. CI runs the tests and then starts the app with
+`start-kemudi.sh` on Linux and on macOS. `python tools/mutation_check.py` breaks the code in six places on a copy
 and confirms that the tests notice each one.
 
 ## Licence and credit

@@ -131,6 +131,7 @@ def test_readme_numbers_and_samples_are_the_measured_ones():
         samples = json.loads((folder / "samples.json").read_text(encoding="utf-8"))
         assert block(readme, "results") == results_table(summary)
         assert block(readme, "doses") == dose_table(summary)
+        assert block(readme, "paired") == (ROOT / "docs" / "paired_table.md").read_text(encoding="utf-8").strip()
         assert block(readme, "samples") == sample_block(summary, samples)
         assert block(readme, "echoes") == echo_table(summary, samples)
 
