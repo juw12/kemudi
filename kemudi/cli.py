@@ -1,4 +1,4 @@
-"""Command line: kemudi fetch | extract | measure | report | say | serve."""
+"""Command line: kemudi fetch | extract | measure | report | reproduce | say | serve."""
 
 from __future__ import annotations
 
@@ -78,6 +78,12 @@ def command_report(args) -> None:
         print(path)
 
 
+def command_reproduce(args) -> None:
+    """Everything behind the published numbers, in order: vectors, measurements, charts and tables."""
+    for step in (command_extract, command_measure, command_report):
+        step(args)
+
+
 def parse_knobs(pairs: list[str]) -> dict[str, float]:
     knobs = {}
     for pair in pairs:
@@ -133,8 +139,11 @@ def main(argv: list[str] | None = None) -> None:
     add("extract", command_extract, "find the steering vectors and check them on held-out text")
     measure = add("measure", command_measure, "measure the dose-response of every knob")
     measure.add_argument("--axis", action="append", help="measure only this axis (repeatable)")
-    report = add("report", command_report, "write the charts and the results table")
-    report.add_argument("--out", default="docs", help="folder for the charts and RESULTS.md")
+    report = add("report", command_report, "write the charts and the results tables")
+    reproduce = add("reproduce", command_reproduce, "extract, measure and report in one go (one to two hours on a CPU)")
+    reproduce.set_defaults(axis=None)
+    for command in (report, reproduce):
+        command.add_argument("--out", default="docs", help="folder for the charts and tables")
     say = add("say", command_say, "continue a story in the terminal")
     say.add_argument("story")
     say.add_argument("--knob", action="append", default=[], metavar="AXIS=DOSE", help="for example mood=0.16")

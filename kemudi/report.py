@@ -130,6 +130,25 @@ def results_table(summary: dict) -> str:
     return "\n".join(lines)
 
 
+def dose_table(summary: dict) -> str:
+    """The effect at every dose with its 95% bootstrap interval. A star marks a dose past the fluency limits."""
+    settings = summary["settings"]
+    measured = {name: entry for name, entry in summary["axes"].items() if "steering" in entry}
+    lines = ["| Dose | " + " | ".join(measured) + " |", "|---" * (len(measured) + 1) + "|"]
+    for dose in sorted({point["dose"] for entry in measured.values() for point in entry["steering"]}):
+        cells = []
+        for entry in measured.values():
+            point = next((point for point in entry["steering"] if point["dose"] == dose), None)
+            if point is None:
+                cells.append("not measured")
+                continue
+            low, high = point["effect_ci"]
+            star = "" if dose == 0 or is_fluent(point, settings) else " *"
+            cells.append(f"{point['effect']:.2f} ({low:.2f} to {high:.2f}){star}")
+        lines.append(f"| {dose:+.2f} | " + " | ".join(cells) + " |")
+    return "\n".join(lines)
+
+
 def sample_block(summary: dict, samples: dict, every_dose: bool = False, limit: int = 240) -> str:
     """One story opening continued with the same seed: dose 0 and both ends of each usable range.
 
@@ -180,7 +199,9 @@ def write_report(calibration_folder: Path, out: Path) -> list[Path]:
         written.append(path)
     table = out / "results_table.md"
     table.write_text(results_table(summary) + "\n", encoding="utf-8", newline="\n")
-    written.append(table)
+    doses = out / "dose_table.md"
+    doses.write_text(dose_table(summary) + "\n", encoding="utf-8", newline="\n")
+    written += [table, doses]
     samples_path = calibration_folder / "samples.json"
     if samples_path.is_file():
         samples = json.loads(samples_path.read_text(encoding="utf-8"))

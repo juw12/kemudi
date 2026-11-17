@@ -24,10 +24,13 @@ of what it does to the text and the dose at which the text breaks.
 
 ## Start it
 
-On Windows, double-click `Start Kemudi.cmd`. The first start installs Python packages and
-downloads the model once (about 1.3 GB together), then opens the app in your browser.
+On Windows, double-click `Start Kemudi.cmd`. On macOS or Linux, run `./start-kemudi.sh`. The
+first start installs Python packages and downloads the model once (about 1.3 GB together), then
+opens the app in your browser. The Windows script was run from a fresh clone on
+Windows 10 with the model already on disk. The shell script does the same steps; the tests
+check its syntax on Linux, and it has not been run on a Mac.
 
-On any system with Python 3.10 or newer:
+By hand, on any system with Python 3.10 or newer:
 
 ```
 pip install torch --index-url https://download.pytorch.org/whl/cpu
@@ -66,10 +69,15 @@ How to read it:
 - **Held-out AUC**: how well the direction separates hand-written sentences of the two poles
   that had no part in building or choosing it. 1.0 is perfect, 0.5 is chance.
 - **Judge AUC**: how well the instrument that scores the effect separates those same sentences.
-  Speech needs no judge: quotation marks are counted.
+  This is a check the judge had to pass, not an independent validation: the judge was chosen
+  on these sentences (see "What changed on the way"). An AUC depends only on the order of the
+  scores, so setting the judge's zero point on half of the sentences does not raise it. The
+  held-out figure for the judge is in "How it works", step 5. Speech needs no judge: quotation
+  marks are counted.
 - **Usable doses**: the widest range around zero where the text passes two limits fixed in
   advance: perplexity at most 1.5 times that of dose 0, and at least 85% of the distinct word
-  pairs of dose 0 (a repetition check).
+  pairs of dose 0 (a repetition check). Perplexity says how surprising the unsteered model
+  finds a text; fluent text scores low and broken text scores high.
 - **Effect**: for mood, tension and register a 0 to 1 scale on which 0.27 is a typical
   hand-written sentence of the low pole and 0.73 one of the high pole. For speech it is the share
   of characters inside quotation marks.
@@ -134,6 +142,36 @@ shared scale. Filled points pass the fluency limits, hollow points do not, the b
 usable range, the squares are the random direction and the row of numbers under the axis is the
 perplexity ratio.
 
+The same curves as numbers: the mean effect at every dose with its 95% bootstrap interval over
+the 16 texts. A star marks a dose that fails a fluency limit.
+
+<!-- doses:start -->
+| Dose | mood | tension | register | speech |
+|---|---|---|---|---|
+| -0.60 | 0.34 (0.28 to 0.39) * | 0.26 (0.24 to 0.28) * | 0.34 (0.29 to 0.40) * | 0.00 (0.00 to 0.00) * |
+| -0.45 | 0.30 (0.24 to 0.36) * | 0.29 (0.26 to 0.33) * | 0.38 (0.36 to 0.41) * | 0.00 (0.00 to 0.00) |
+| -0.30 | 0.35 (0.30 to 0.40) | 0.29 (0.25 to 0.32) | 0.42 (0.38 to 0.46) * | 0.00 (0.00 to 0.00) |
+| -0.15 | 0.39 (0.33 to 0.44) | 0.32 (0.29 to 0.34) | 0.48 (0.45 to 0.51) | 0.00 (0.00 to 0.00) |
+| +0.00 | 0.54 (0.50 to 0.56) | 0.35 (0.32 to 0.38) | 0.51 (0.49 to 0.53) | 0.00 (0.00 to 0.00) |
+| +0.15 | 0.59 (0.56 to 0.63) | 0.41 (0.39 to 0.43) | 0.54 (0.52 to 0.56) | 0.04 (0.00 to 0.11) |
+| +0.30 | 0.68 (0.63 to 0.72) | 0.45 (0.42 to 0.48) * | 0.57 (0.54 to 0.59) * | 0.11 (0.03 to 0.22) * |
+| +0.45 | 0.68 (0.61 to 0.74) | 0.46 (0.43 to 0.48) * | 0.60 (0.58 to 0.62) * | 0.28 (0.14 to 0.42) * |
+| +0.60 | 0.76 (0.72 to 0.79) * | 0.46 (0.44 to 0.49) * | 0.61 (0.58 to 0.63) * | 0.34 (0.20 to 0.48) * |
+<!-- doses:end -->
+
+Read with the intervals, the claims get smaller:
+
+- **mood**: the intervals at both usable ends (0.30 to 0.40 and 0.61 to 0.74) lie clear of the
+  interval at dose 0 (0.50 to 0.56). Below -0.30 the curve stops falling.
+- **tension**: the high end (0.39 to 0.43) lies clear of dose 0 (0.32 to 0.38); the low end
+  (0.25 to 0.32) touches it.
+- **register**: the intervals at both usable ends (0.45 to 0.51 and 0.52 to 0.56) overlap the
+  interval at dose 0 (0.49 to 0.53). Only the two ends are clear of each other.
+- **speech**: the interval at the usable high end (0.00 to 0.11) includes the dose-0 value of 0.
+
+These are intervals of each mean on its own. The texts are paired (same opening and same seed
+at every dose), and no paired test was run.
+
 ### The same opening at three doses
 
 One evaluation opening, the first in the list, continued with the same seed at dose 0 and at
@@ -190,8 +228,10 @@ in `samples.json`, and the first one at every dose is in [docs/samples.md](docs/
    (mood 0.914, tension 0.945, register 1.000). Its zero point and its unit come from the even-numbered sentences; on the
    odd-numbered ones it then puts the sentence on the correct side this often: mood 0.94, tension 0.75, register 0.94.
 
-Reproduce everything with `kemudi extract`, `kemudi measure` and `kemudi report`. On a laptop
-CPU the measurement takes one to two hours.
+One command reproduces everything: `kemudi reproduce`. It runs `kemudi extract`,
+`kemudi measure` and `kemudi report` in that order, and on a laptop CPU it takes one to two
+hours. The published numbers were made with the three commands run separately (see "How the
+runs were made" below); `kemudi reproduce` as one run was not timed.
 
 ## What was fixed in advance, and what changed on the way
 
@@ -253,7 +293,8 @@ Spaceship's `CONTROLS` block and is not a test of Spaceship, which uses a far la
 - **One small model.** Everything here was measured on Qwen2.5-0.5B-Instruct. Nothing is
   claimed for any other model.
 - **Small sample.** 16 openings, 48 tokens each, one random seed, English, story continuation
-  only. The intervals in the charts are bootstrap intervals over those 16 texts.
+  only. The intervals in the charts and in the dose table are bootstrap intervals over those 16
+  texts.
 - **The judge is the model itself.** No person rated the texts. The judge passed its check on
   hand-written sentences, and for tension it put only 75% of the held-out ones on the correct
   side, so single texts are scored loosely and only averages should be read.
@@ -284,7 +325,7 @@ kemudi measure --axis yourknob
 kemudi report
 ```
 
-Another model: `kemudi extract --model <repo id or local folder>` and the same two commands.
+Another model: `kemudi reproduce --model <repo id or local folder>`.
 It has to be a chat model that `transformers` can load, with its blocks at `model.model.layers`.
 A new model gets its own folder in `kemudi/calibrations` and its own measurements; nothing is
 carried over from the 0.5B model.
@@ -297,8 +338,8 @@ pytest
 ```
 
 The tests run without the model: fake engines stand in for it, and one test checks that the
-table, the sample texts and the echo count in this README are exactly what the shipped
-calibration produces. `python tools/mutation_check.py` breaks the code in six places on a copy
+results table, the dose table, the sample texts and the echo count in this README are exactly
+what the shipped calibration produces. `python tools/mutation_check.py` breaks the code in six places on a copy
 and confirms that the tests notice each one.
 
 ## Licence and credit

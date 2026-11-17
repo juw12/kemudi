@@ -18,3 +18,28 @@ jobs:
           pip install -e ".[dev]"
       - name: Test
         run: pytest -q
+
+  launcher:
+    # Runs the one-step start script for real: fresh machine, install, model download, app answers, text is written.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Start the app and wait for it to answer
+        run: |
+          ./start-kemudi.sh > launcher.log 2>&1 &
+          for attempt in $(seq 1 180); do
+            if curl -fs http://127.0.0.1:8765/api/info > info.json; then break; fi
+            sleep 5
+          done
+          cat launcher.log
+          python3 -c "import json; info = json.load(open('info.json')); assert len(info['summary']['axes']) == 4, info"
+      - name: Write a steered sentence
+        run: .venv/bin/python -m kemudi say "The lighthouse keeper climbed the stairs" --knob mood=0.3 --tokens 24

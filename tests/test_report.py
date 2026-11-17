@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 
 from kemudi import calibration
-from kemudi.report import best_fluent, echo_table, is_fluent, repeats_the_control, results_table, sample_block, write_report
+from kemudi.report import best_fluent, dose_table, echo_table, is_fluent, repeats_the_control, results_table, sample_block, write_report
 
 SETTINGS = {"max_perplexity_ratio": 1.5, "min_distinct_ratio": 0.85, "min_judge_auc": 0.9}
 
@@ -86,9 +86,24 @@ def test_table_does_not_count_a_fluent_dose_beyond_the_usable_range(tmp_path):
         "random_direction": [point("dose", 0.2, 0.11)],
     }
     (tmp_path / "calibration.json").write_text(json.dumps({"settings": SETTINGS, "axes": {"tension": entry}}), encoding="utf-8")
-    table = write_report(tmp_path, tmp_path / "docs")[-1]
+    table = write_report(tmp_path, tmp_path / "docs")[1]
     row = table.read_text(encoding="utf-8").splitlines()[2]
     assert row == "| tension (calm to tense) | 12 | 0.90 | counted | +0.00 to +0.20 | 0.10 | none to 0.30 | none to 0.11 | none to 0.20 | 0.4 |"
+
+
+def test_dose_table_gives_every_dose_its_interval_and_stars_the_ones_past_the_limit():
+    summary = {"settings": SETTINGS, "axes": {
+        "mood": {"steering": [point("dose", -0.2, 0.1, 3.0), point("dose", 0.0, 0.5, 9.0), point("dose", 0.2, 0.7)]},
+        "speech": {"steering": [point("dose", 0.0, 0.2), point("dose", 0.2, 0.4, 1.0, 0.5)]},
+        "unmeasured": {},
+    }}
+    assert dose_table(summary).splitlines() == [
+        "| Dose | mood | speech |",
+        "|---|---|---|",
+        "| -0.20 | 0.10 (0.05 to 0.15) * | not measured |",
+        "| +0.00 | 0.50 (0.45 to 0.55) | 0.20 (0.15 to 0.25) |",
+        "| +0.20 | 0.70 (0.65 to 0.75) | 0.40 (0.35 to 0.45) * |",
+    ]
 
 
 ROOT = Path(__file__).parents[1]
@@ -115,6 +130,7 @@ def test_readme_numbers_and_samples_are_the_measured_ones():
         summary = json.loads((folder / "calibration.json").read_text(encoding="utf-8"))
         samples = json.loads((folder / "samples.json").read_text(encoding="utf-8"))
         assert block(readme, "results") == results_table(summary)
+        assert block(readme, "doses") == dose_table(summary)
         assert block(readme, "samples") == sample_block(summary, samples)
         assert block(readme, "echoes") == echo_table(summary, samples)
 
