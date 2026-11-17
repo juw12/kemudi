@@ -252,9 +252,14 @@ in `samples.json`, and the first one at every dose is in [docs/samples.md](docs/
    odd-numbered ones it then puts the sentence on the correct side this often: mood 0.94, tension 0.75, register 0.94.
 
 One command reproduces everything: `kemudi reproduce`. It runs `kemudi extract`,
-`kemudi measure` and `kemudi report` in that order, and on a laptop CPU it takes one to two
-hours. The published numbers were made with the three commands run separately (see "How the
-runs were made" below); `kemudi reproduce` as one run was not timed.
+`kemudi measure` and `kemudi report` in that order. The published numbers were first made with
+the three commands run separately (see "How the runs were made" below). Afterwards
+`kemudi reproduce` was run once as a single command into an empty folder, on the same PC with
+the same package versions. It took 1 hour 58 minutes on a laptop CPU that was busy with other
+work, and it gave back the shipped vectors and `calibration.json` byte for byte, the same
+1,088 texts and the same report files. That shows the pipeline repeats itself on one machine.
+It was not run on a second machine, where small floating-point differences could change some
+of the texts.
 
 ## What was fixed in advance, and what changed on the way
 
@@ -333,8 +338,8 @@ Spaceship's `CONTROLS` block and is not a test of Spaceship, which uses a far la
   continuing the story and do not continue it: 3 inside the usable ranges and 8 past them. The same
   search finds none among the random-direction and prompt-control texts. These texts stay in
   the averages. The count was made once, after the measurement, and no test checks it.
-- **One knob at a time.** Each knob was measured alone. The app lets you turn several at once;
-  what combinations do was not measured.
+- **One knob at a time.** Each knob was measured alone. The app lets you turn several at once
+  and shows a warning when two or more are on; what combinations do was not measured.
 - **Block 14 is the edge of the allowed band** for all four knobs. Later blocks were not tried.
 - **The gauges are a readout, not a result.** They show the model's state along the vector and
   were not tested as a measure of the text.

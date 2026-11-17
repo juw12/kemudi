@@ -66,6 +66,7 @@ def test_info_and_page(running):
     assert json.loads(body) == {"summary": {"model": "fake", "axes": {}}}
     status, page = call(port, "GET", "/")
     assert status == 200 and b"<title>Kemudi</title>" in page
+    assert b'id="combo"' in page and b"Each knob was measured alone" in page  # the warning for two or more knobs
     assert call(port, "GET", "/nothing")[0] == 404
     assert engine.gauged == ["mood"]
 

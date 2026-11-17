@@ -87,6 +87,7 @@
   </section>
   <aside>
     <h2>Knobs <button id="reset">All to zero</button></h2>
+    <div class="note" id="combo" role="status"></div>
     <div id="axes"></div>
   </aside>
 </main>
@@ -137,7 +138,7 @@ function axisCard(name, axis) {
       <input type="range" min="${-limit}" max="${limit}" step="0.01" value="0" aria-label="${name}: ${axis.low} to ${axis.high}">
     </div>
     <div class="note" data-note></div>
-    <div class="gauge"><span>text reads</span><div class="meter"><div class="needle" data-needle></div></div></div>
+    <div class="gauge" title="The model's own state along this direction, word by word. A readout, not a measured result."><span>text reads</span><div class="meter"><div class="needle" data-needle></div></div></div>
     ${curve(axis, limit)}`
   const slider = card.querySelector("input")
   slider.oninput = () => setDose(name, Number(slider.value))
@@ -188,7 +189,14 @@ function setDose(name, dose, quiet) {
     marker.setAttribute("x1", position)
     marker.setAttribute("x2", position)
   }
+  showCombination()
   if (!quiet && state.running && !state.running.locked) post("/api/knobs", { knobs: state.knobs })
+}
+
+function showCombination() {
+  const on = Object.values(state.knobs).filter((dose) => dose !== 0).length
+  $("combo").className = "note" + (on > 1 ? " warn" : "")
+  $("combo").textContent = on > 1 ? `${on} knobs are on. Each knob was measured alone; what they do together was not measured.` : ""
 }
 
 function post(path, body, signal) {
