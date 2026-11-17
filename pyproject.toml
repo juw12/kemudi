@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kemudi"
+version = "0.1.0"
+description = "Steering knobs for a local language model, each with a measured dose-response."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Juwen Lie" }]
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "transformers>=4.45", "numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+kemudi = "kemudi.cli:main"
+
+[project.urls]
+Repository = "https://github.com/juw12/kemudi"
+
+[tool.setuptools.packages.find]
+include = ["kemudi*"]
+
+[tool.setuptools.package-data]
+kemudi = ["web/*.html", "data/*.json", "calibrations/*/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning"]

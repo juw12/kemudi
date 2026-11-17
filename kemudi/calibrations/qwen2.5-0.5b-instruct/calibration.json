@@ -1,0 +1,953 @@
+{
+  "model": "Qwen2.5-0.5B-Instruct",
+  "blocks": 24,
+  "width": 896,
+  "axes": {
+    "mood": {
+      "low": "bleak",
+      "high": "hopeful",
+      "layer": 14,
+      "scale": 14.720789909362793,
+      "pole_separation": 0.0908,
+      "gauge_mid": -0.07211068272590637,
+      "gauge_half": 0.668126255273819,
+      "pairs": 48,
+      "dev_auc_by_layer": {
+        "4": 0.781,
+        "5": 0.828,
+        "6": 0.719,
+        "7": 0.797,
+        "8": 0.969,
+        "9": 0.922,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 0.969,
+        "14": 1.0
+      },
+      "dev_auc": 1.0,
+      "test_auc": 0.953,
+      "judge": {
+        "auc": 0.914,
+        "centre": -0.0009,
+        "scale": 0.0877,
+        "held_out_accuracy": 0.938
+      },
+      "measurable": true,
+      "metric": "judge",
+      "steering": [
+        {
+          "dose": -0.6,
+          "effect": 0.335,
+          "effect_ci": [
+            0.2809,
+            0.3912
+          ],
+          "perplexity_ratio": 2.386,
+          "distinct_ratio": 0.986,
+          "samples": 16
+        },
+        {
+          "dose": -0.45,
+          "effect": 0.3012,
+          "effect_ci": [
+            0.2385,
+            0.3586
+          ],
+          "perplexity_ratio": 1.56,
+          "distinct_ratio": 0.975,
+          "samples": 16
+        },
+        {
+          "dose": -0.3,
+          "effect": 0.348,
+          "effect_ci": [
+            0.296,
+            0.396
+          ],
+          "perplexity_ratio": 1.294,
+          "distinct_ratio": 0.985,
+          "samples": 16
+        },
+        {
+          "dose": -0.15,
+          "effect": 0.3875,
+          "effect_ci": [
+            0.3343,
+            0.4353
+          ],
+          "perplexity_ratio": 1.105,
+          "distinct_ratio": 0.988,
+          "samples": 16
+        },
+        {
+          "dose": 0.0,
+          "effect": 0.5353,
+          "effect_ci": [
+            0.5036,
+            0.5638
+          ],
+          "perplexity_ratio": 1.0,
+          "distinct_ratio": 1.0,
+          "samples": 16
+        },
+        {
+          "dose": 0.15,
+          "effect": 0.5949,
+          "effect_ci": [
+            0.5595,
+            0.6335
+          ],
+          "perplexity_ratio": 0.947,
+          "distinct_ratio": 0.998,
+          "samples": 16
+        },
+        {
+          "dose": 0.3,
+          "effect": 0.6777,
+          "effect_ci": [
+            0.6326,
+            0.7158
+          ],
+          "perplexity_ratio": 1.108,
+          "distinct_ratio": 1.006,
+          "samples": 16
+        },
+        {
+          "dose": 0.45,
+          "effect": 0.6842,
+          "effect_ci": [
+            0.6145,
+            0.7438
+          ],
+          "perplexity_ratio": 1.332,
+          "distinct_ratio": 1.008,
+          "samples": 16
+        },
+        {
+          "dose": 0.6,
+          "effect": 0.7563,
+          "effect_ci": [
+            0.7202,
+            0.7946
+          ],
+          "perplexity_ratio": 2.416,
+          "distinct_ratio": 1.005,
+          "samples": 16
+        }
+      ],
+      "prompt": [
+        {
+          "level": -3,
+          "effect": 0.3796,
+          "effect_ci": [
+            0.2522,
+            0.52
+          ],
+          "perplexity_ratio": 9.297,
+          "distinct_ratio": 0.997,
+          "samples": 16
+        },
+        {
+          "level": -2,
+          "effect": 0.3613,
+          "effect_ci": [
+            0.263,
+            0.4707
+          ],
+          "perplexity_ratio": 12.649,
+          "distinct_ratio": 1.0,
+          "samples": 16
+        },
+        {
+          "level": -1,
+          "effect": 0.4071,
+          "effect_ci": [
+            0.3114,
+            0.4882
+          ],
+          "perplexity_ratio": 12.005,
+          "distinct_ratio": 0.995,
+          "samples": 16
+        },
+        {
+          "level": 1,
+          "effect": 0.6929,
+          "effect_ci": [
+            0.5986,
+            0.795
+          ],
+          "perplexity_ratio": 8.009,
+          "distinct_ratio": 1.003,
+          "samples": 16
+        },
+        {
+          "level": 2,
+          "effect": 0.6832,
+          "effect_ci": [
+            0.5868,
+            0.7889
+          ],
+          "perplexity_ratio": 10.149,
+          "distinct_ratio": 1.002,
+          "samples": 16
+        },
+        {
+          "level": 3,
+          "effect": 0.627,
+          "effect_ci": [
+            0.5162,
+            0.7425
+          ],
+          "perplexity_ratio": 6.427,
+          "distinct_ratio": 0.994,
+          "samples": 16
+        }
+      ],
+      "random_direction": [
+        {
+          "dose": -0.3,
+          "effect": 0.4921,
+          "effect_ci": [
+            0.451,
+            0.5328
+          ],
+          "perplexity_ratio": 1.049,
+          "distinct_ratio": 0.995,
+          "samples": 16
+        },
+        {
+          "dose": 0.45,
+          "effect": 0.5101,
+          "effect_ci": [
+            0.4323,
+            0.5912
+          ],
+          "perplexity_ratio": 1.498,
+          "distinct_ratio": 0.995,
+          "samples": 16
+        }
+      ],
+      "usable": [
+        -0.3,
+        0.45
+      ],
+      "spearman_in_usable": 0.816
+    },
+    "tension": {
+      "low": "calm",
+      "high": "tense",
+      "layer": 14,
+      "scale": 14.802902221679688,
+      "pole_separation": 0.0929,
+      "gauge_mid": 0.5176539123058319,
+      "gauge_half": 0.6874074041843414,
+      "pairs": 48,
+      "dev_auc_by_layer": {
+        "4": 0.828,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 0.984,
+        "13": 1.0,
+        "14": 1.0
+      },
+      "dev_auc": 1.0,
+      "test_auc": 0.969,
+      "judge": {
+        "auc": 0.945,
+        "centre": 0.0988,
+        "scale": 0.1263,
+        "held_out_accuracy": 0.75
+      },
+      "measurable": true,
+      "metric": "judge",
+      "steering": [
+        {
+          "dose": -0.6,
+          "effect": 0.2609,
+          "effect_ci": [
+            0.2438,
+            0.2786
+          ],
+          "perplexity_ratio": 2.588,
+          "distinct_ratio": 0.99,
+          "samples": 16
+        },
+        {
+          "dose": -0.45,
+          "effect": 0.2916,
+          "effect_ci": [
+            0.2566,
+            0.3269
+          ],
+          "perplexity_ratio": 1.523,
+          "distinct_ratio": 0.997,
+          "samples": 16
+        },
+        {
+          "dose": -0.3,
+          "effect": 0.2864,
+          "effect_ci": [
+            0.2478,
+            0.3203
+          ],
+          "perplexity_ratio": 1.057,
+          "distinct_ratio": 0.991,
+          "samples": 16
+        },
+        {
+          "dose": -0.15,
+          "effect": 0.318,
+          "effect_ci": [
+            0.2924,
+            0.3409
+          ],
+          "perplexity_ratio": 0.939,
+          "distinct_ratio": 0.992,
+          "samples": 16
+        },
+        {
+          "dose": 0.0,
+          "effect": 0.3499,
+          "effect_ci": [
+            0.3209,
+            0.3789
+          ],
+          "perplexity_ratio": 1.0,
+          "distinct_ratio": 1.0,
+          "samples": 16
+        },
+        {
+          "dose": 0.15,
+          "effect": 0.4099,
+          "effect_ci": [
+            0.3901,
+            0.4308
+          ],
+          "perplexity_ratio": 1.163,
+          "distinct_ratio": 0.99,
+          "samples": 16
+        },
+        {
+          "dose": 0.3,
+          "effect": 0.4452,
+          "effect_ci": [
+            0.4193,
+            0.4754
+          ],
+          "perplexity_ratio": 1.615,
+          "distinct_ratio": 1.003,
+          "samples": 16
+        },
+        {
+          "dose": 0.45,
+          "effect": 0.4561,
+          "effect_ci": [
+            0.4297,
+            0.4823
+          ],
+          "perplexity_ratio": 2.522,
+          "distinct_ratio": 0.997,
+          "samples": 16
+        },
+        {
+          "dose": 0.6,
+          "effect": 0.4644,
+          "effect_ci": [
+            0.4356,
+            0.4933
+          ],
+          "perplexity_ratio": 4.15,
+          "distinct_ratio": 0.98,
+          "samples": 16
+        }
+      ],
+      "prompt": [
+        {
+          "level": -3,
+          "effect": 0.464,
+          "effect_ci": [
+            0.4155,
+            0.5211
+          ],
+          "perplexity_ratio": 4.056,
+          "distinct_ratio": 0.973,
+          "samples": 16
+        },
+        {
+          "level": -2,
+          "effect": 0.3809,
+          "effect_ci": [
+            0.3333,
+            0.4263
+          ],
+          "perplexity_ratio": 4.856,
+          "distinct_ratio": 0.961,
+          "samples": 16
+        },
+        {
+          "level": -1,
+          "effect": 0.4457,
+          "effect_ci": [
+            0.3908,
+            0.5168
+          ],
+          "perplexity_ratio": 4.21,
+          "distinct_ratio": 0.985,
+          "samples": 16
+        },
+        {
+          "level": 1,
+          "effect": 0.4704,
+          "effect_ci": [
+            0.3984,
+            0.5686
+          ],
+          "perplexity_ratio": 4.027,
+          "distinct_ratio": 0.998,
+          "samples": 16
+        },
+        {
+          "level": 2,
+          "effect": 0.4761,
+          "effect_ci": [
+            0.3971,
+            0.5816
+          ],
+          "perplexity_ratio": 4.649,
+          "distinct_ratio": 0.967,
+          "samples": 16
+        },
+        {
+          "level": 3,
+          "effect": 0.5061,
+          "effect_ci": [
+            0.4144,
+            0.6233
+          ],
+          "perplexity_ratio": 4.326,
+          "distinct_ratio": 0.993,
+          "samples": 16
+        }
+      ],
+      "random_direction": [
+        {
+          "dose": -0.3,
+          "effect": 0.3526,
+          "effect_ci": [
+            0.3306,
+            0.3741
+          ],
+          "perplexity_ratio": 1.02,
+          "distinct_ratio": 0.992,
+          "samples": 16
+        },
+        {
+          "dose": 0.15,
+          "effect": 0.3529,
+          "effect_ci": [
+            0.3266,
+            0.3763
+          ],
+          "perplexity_ratio": 0.981,
+          "distinct_ratio": 0.994,
+          "samples": 16
+        }
+      ],
+      "usable": [
+        -0.3,
+        0.15
+      ],
+      "spearman_in_usable": 0.645
+    },
+    "register": {
+      "low": "casual",
+      "high": "formal",
+      "layer": 14,
+      "scale": 14.69023609161377,
+      "pole_separation": 0.1631,
+      "gauge_mid": 0.23804563283920288,
+      "gauge_half": 1.1980921626091003,
+      "pairs": 48,
+      "dev_auc_by_layer": {
+        "4": 0.922,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 0.984,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0
+      },
+      "dev_auc": 1.0,
+      "test_auc": 1.0,
+      "judge": {
+        "auc": 1.0,
+        "centre": 0.0174,
+        "scale": 0.1845,
+        "held_out_accuracy": 0.938
+      },
+      "measurable": true,
+      "metric": "judge",
+      "steering": [
+        {
+          "dose": -0.6,
+          "effect": 0.3404,
+          "effect_ci": [
+            0.2865,
+            0.3959
+          ],
+          "perplexity_ratio": 4.469,
+          "distinct_ratio": 0.984,
+          "samples": 16
+        },
+        {
+          "dose": -0.45,
+          "effect": 0.3826,
+          "effect_ci": [
+            0.3593,
+            0.4088
+          ],
+          "perplexity_ratio": 2.454,
+          "distinct_ratio": 0.988,
+          "samples": 16
+        },
+        {
+          "dose": -0.3,
+          "effect": 0.4201,
+          "effect_ci": [
+            0.3809,
+            0.4578
+          ],
+          "perplexity_ratio": 1.605,
+          "distinct_ratio": 0.998,
+          "samples": 16
+        },
+        {
+          "dose": -0.15,
+          "effect": 0.4828,
+          "effect_ci": [
+            0.4549,
+            0.5083
+          ],
+          "perplexity_ratio": 1.065,
+          "distinct_ratio": 0.997,
+          "samples": 16
+        },
+        {
+          "dose": 0.0,
+          "effect": 0.5092,
+          "effect_ci": [
+            0.4868,
+            0.5287
+          ],
+          "perplexity_ratio": 1.0,
+          "distinct_ratio": 1.0,
+          "samples": 16
+        },
+        {
+          "dose": 0.15,
+          "effect": 0.5412,
+          "effect_ci": [
+            0.5239,
+            0.5586
+          ],
+          "perplexity_ratio": 1.144,
+          "distinct_ratio": 0.998,
+          "samples": 16
+        },
+        {
+          "dose": 0.3,
+          "effect": 0.5657,
+          "effect_ci": [
+            0.5431,
+            0.5884
+          ],
+          "perplexity_ratio": 1.644,
+          "distinct_ratio": 0.989,
+          "samples": 16
+        },
+        {
+          "dose": 0.45,
+          "effect": 0.598,
+          "effect_ci": [
+            0.5753,
+            0.6193
+          ],
+          "perplexity_ratio": 2.813,
+          "distinct_ratio": 0.964,
+          "samples": 16
+        },
+        {
+          "dose": 0.6,
+          "effect": 0.6088,
+          "effect_ci": [
+            0.5835,
+            0.6319
+          ],
+          "perplexity_ratio": 4.221,
+          "distinct_ratio": 0.937,
+          "samples": 16
+        }
+      ],
+      "prompt": [
+        {
+          "level": -3,
+          "effect": 0.5275,
+          "effect_ci": [
+            0.497,
+            0.5665
+          ],
+          "perplexity_ratio": 3.107,
+          "distinct_ratio": 0.998,
+          "samples": 16
+        },
+        {
+          "level": -2,
+          "effect": 0.5098,
+          "effect_ci": [
+            0.4865,
+            0.5362
+          ],
+          "perplexity_ratio": 2.149,
+          "distinct_ratio": 0.991,
+          "samples": 16
+        },
+        {
+          "level": -1,
+          "effect": 0.5204,
+          "effect_ci": [
+            0.4966,
+            0.5467
+          ],
+          "perplexity_ratio": 2.309,
+          "distinct_ratio": 0.995,
+          "samples": 16
+        },
+        {
+          "level": 1,
+          "effect": 0.5274,
+          "effect_ci": [
+            0.497,
+            0.5674
+          ],
+          "perplexity_ratio": 2.305,
+          "distinct_ratio": 0.997,
+          "samples": 16
+        },
+        {
+          "level": 2,
+          "effect": 0.5403,
+          "effect_ci": [
+            0.5092,
+            0.5806
+          ],
+          "perplexity_ratio": 2.375,
+          "distinct_ratio": 0.996,
+          "samples": 16
+        },
+        {
+          "level": 3,
+          "effect": 0.5505,
+          "effect_ci": [
+            0.5142,
+            0.594
+          ],
+          "perplexity_ratio": 3.166,
+          "distinct_ratio": 0.999,
+          "samples": 16
+        }
+      ],
+      "random_direction": [
+        {
+          "dose": -0.15,
+          "effect": 0.5161,
+          "effect_ci": [
+            0.4994,
+            0.5328
+          ],
+          "perplexity_ratio": 0.916,
+          "distinct_ratio": 0.989,
+          "samples": 16
+        },
+        {
+          "dose": 0.15,
+          "effect": 0.5062,
+          "effect_ci": [
+            0.4849,
+            0.5264
+          ],
+          "perplexity_ratio": 1.087,
+          "distinct_ratio": 0.994,
+          "samples": 16
+        }
+      ],
+      "usable": [
+        -0.15,
+        0.15
+      ],
+      "spearman_in_usable": 0.475
+    },
+    "speech": {
+      "low": "narration",
+      "high": "dialogue",
+      "layer": 14,
+      "scale": 14.708998680114746,
+      "pole_separation": 0.067,
+      "gauge_mid": -0.5280633121728897,
+      "gauge_half": 0.49282406270504,
+      "pairs": 48,
+      "dev_auc_by_layer": {
+        "4": 0.766,
+        "5": 0.969,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0
+      },
+      "dev_auc": 1.0,
+      "test_auc": 1.0,
+      "measurable": true,
+      "metric": "quoted_share",
+      "steering": [
+        {
+          "dose": -0.6,
+          "effect": 0.0,
+          "effect_ci": [
+            0.0,
+            0.0
+          ],
+          "perplexity_ratio": 1.834,
+          "distinct_ratio": 0.997,
+          "samples": 16
+        },
+        {
+          "dose": -0.45,
+          "effect": 0.0,
+          "effect_ci": [
+            0.0,
+            0.0
+          ],
+          "perplexity_ratio": 1.212,
+          "distinct_ratio": 0.991,
+          "samples": 16
+        },
+        {
+          "dose": -0.3,
+          "effect": 0.0,
+          "effect_ci": [
+            0.0,
+            0.0
+          ],
+          "perplexity_ratio": 1.053,
+          "distinct_ratio": 0.994,
+          "samples": 16
+        },
+        {
+          "dose": -0.15,
+          "effect": 0.0,
+          "effect_ci": [
+            0.0,
+            0.0
+          ],
+          "perplexity_ratio": 0.953,
+          "distinct_ratio": 1.0,
+          "samples": 16
+        },
+        {
+          "dose": 0.0,
+          "effect": 0.0,
+          "effect_ci": [
+            0.0,
+            0.0
+          ],
+          "perplexity_ratio": 1.0,
+          "distinct_ratio": 1.0,
+          "samples": 16
+        },
+        {
+          "dose": 0.15,
+          "effect": 0.042,
+          "effect_ci": [
+            0.0,
+            0.1099
+          ],
+          "perplexity_ratio": 1.266,
+          "distinct_ratio": 1.001,
+          "samples": 16
+        },
+        {
+          "dose": 0.3,
+          "effect": 0.1136,
+          "effect_ci": [
+            0.0314,
+            0.2178
+          ],
+          "perplexity_ratio": 1.762,
+          "distinct_ratio": 0.996,
+          "samples": 16
+        },
+        {
+          "dose": 0.45,
+          "effect": 0.2765,
+          "effect_ci": [
+            0.1414,
+            0.4243
+          ],
+          "perplexity_ratio": 2.884,
+          "distinct_ratio": 0.998,
+          "samples": 16
+        },
+        {
+          "dose": 0.6,
+          "effect": 0.3428,
+          "effect_ci": [
+            0.2038,
+            0.4814
+          ],
+          "perplexity_ratio": 5.698,
+          "distinct_ratio": 0.988,
+          "samples": 16
+        }
+      ],
+      "prompt": [
+        {
+          "level": -3,
+          "effect": 0.0425,
+          "effect_ci": [
+            0.0,
+            0.1211
+          ],
+          "perplexity_ratio": 2.265,
+          "distinct_ratio": 0.99,
+          "samples": 16
+        },
+        {
+          "level": -2,
+          "effect": 0.0063,
+          "effect_ci": [
+            0.0,
+            0.0188
+          ],
+          "perplexity_ratio": 2.231,
+          "distinct_ratio": 0.995,
+          "samples": 16
+        },
+        {
+          "level": -1,
+          "effect": 0.0425,
+          "effect_ci": [
+            0.0,
+            0.1211
+          ],
+          "perplexity_ratio": 2.025,
+          "distinct_ratio": 0.99,
+          "samples": 16
+        },
+        {
+          "level": 1,
+          "effect": 0.0115,
+          "effect_ci": [
+            0.0,
+            0.0281
+          ],
+          "perplexity_ratio": 2.275,
+          "distinct_ratio": 0.992,
+          "samples": 16
+        },
+        {
+          "level": 2,
+          "effect": 0.0063,
+          "effect_ci": [
+            0.0,
+            0.0188
+          ],
+          "perplexity_ratio": 2.195,
+          "distinct_ratio": 0.989,
+          "samples": 16
+        },
+        {
+          "level": 3,
+          "effect": 0.0111,
+          "effect_ci": [
+            0.0,
+            0.0271
+          ],
+          "perplexity_ratio": 2.195,
+          "distinct_ratio": 0.988,
+          "samples": 16
+        }
+      ],
+      "random_direction": [
+        {
+          "dose": -0.45,
+          "effect": 0.0506,
+          "effect_ci": [
+            0.0,
+            0.1519
+          ],
+          "perplexity_ratio": 1.269,
+          "distinct_ratio": 0.993,
+          "samples": 16
+        },
+        {
+          "dose": 0.15,
+          "effect": 0.0034,
+          "effect_ci": [
+            0.0,
+            0.0102
+          ],
+          "perplexity_ratio": 0.988,
+          "distinct_ratio": 0.994,
+          "samples": 16
+        }
+      ],
+      "usable": [
+        -0.45,
+        0.15
+      ],
+      "spearman_in_usable": 0.279
+    }
+  },
+  "settings": {
+    "doses": [
+      -0.6,
+      -0.45,
+      -0.3,
+      -0.15,
+      0.0,
+      0.15,
+      0.3,
+      0.45,
+      0.6
+    ],
+    "prompt_levels": [
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3
+    ],
+    "max_new_tokens": 48,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "seed": 1234,
+    "max_perplexity_ratio": 1.5,
+    "min_distinct_ratio": 0.85,
+    "min_judge_auc": 0.9
+  }
+}

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kemudi</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --paper: #f5f2ea; --panel: #fffdf8; --ink: #1c1b19; --soft: #6b675f; --line: #d9d3c5;
+    --go: #0d6b63; --go-soft: #cfe6e1; --warn: #a8321f; --warn-soft: #f1d5cd; --made: #0d4f6b;
+    --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --paper: #131514; --panel: #1b1e1c; --ink: #e9e6dd; --soft: #9a968c; --line: #343833;
+    --go: #5cc4b6; --go-soft: #1f3b37; --warn: #ef8a73; --warn-soft: #43241d; --made: #8fcbe6;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.5 system-ui, "Segoe UI", sans-serif; }
+  header { display: flex; align-items: baseline; gap: 16px; padding: 14px 24px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: 18px; margin: 0; letter-spacing: 0.04em; }
+  header p { margin: 0; color: var(--soft); flex: 1; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px; padding: 24px; max-width: 1280px; margin: 0 auto; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  button, input, textarea { font: inherit; color: inherit; }
+  button { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 14px; cursor: pointer; }
+  button:hover { border-color: var(--ink); }
+  button.primary { background: var(--go); border-color: var(--go); color: var(--paper); font-weight: 600; }
+  button:disabled { opacity: 0.45; cursor: default; }
+  button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--go); outline-offset: 2px; }
+  textarea { width: 100%; min-height: 84px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; resize: vertical; font-family: Georgia, "Times New Roman", serif; font-size: 16px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 16px; }
+  .bar label { color: var(--soft); font-size: 13px; }
+  .bar input { width: 78px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; font-family: var(--mono); }
+  .status { margin-left: auto; color: var(--soft); font: 12px var(--mono); }
+  .pages { display: grid; gap: 16px; }
+  .pages.two { grid-template-columns: 1fr 1fr; }
+  .page { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; min-height: 220px; font: 17px/1.65 Georgia, "Times New Roman", serif; white-space: pre-wrap; }
+  .page h2 { font: 600 12px/1 system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft); margin: 0 0 12px; }
+  .given { color: var(--soft); }
+  .steered { color: var(--made); }
+  .legend { color: var(--soft); font-size: 13px; margin-top: 10px; }
+  .legend b { color: var(--made); font-weight: 600; }
+  aside h2 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft); margin: 0 0 10px; display: flex; justify-content: space-between; align-items: center; }
+  .axis { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; margin-bottom: 12px; }
+  .axis header { padding: 0; border: 0; gap: 8px; }
+  .axis h3 { margin: 0; font-size: 15px; flex: 1; }
+  .dose { font: 600 15px var(--mono); }
+  .poles { display: flex; justify-content: space-between; color: var(--soft); font-size: 13px; margin-top: 6px; }
+  .track { position: relative; height: 26px; }
+  .band { position: absolute; top: 9px; height: 8px; border-radius: 4px; }
+  .band.all { left: 0; right: 0; background: repeating-linear-gradient(135deg, var(--warn-soft) 0 5px, transparent 5px 9px); border: 1px solid var(--line); }
+  .band.usable { background: var(--go-soft); border: 1px solid var(--go); }
+  .track input { position: absolute; inset: 0; width: 100%; margin: 0; background: transparent; appearance: none; -webkit-appearance: none; }
+  .track input::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 22px; border-radius: 4px; background: var(--ink); border: 2px solid var(--panel); cursor: grab; }
+  .track input::-moz-range-thumb { width: 12px; height: 20px; border-radius: 4px; background: var(--ink); border: 2px solid var(--panel); cursor: grab; }
+  .note { font-size: 12.5px; color: var(--soft); min-height: 19px; }
+  .note.warn { color: var(--warn); }
+  .gauge { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--soft); margin-top: 4px; }
+  .meter { position: relative; flex: 1; height: 6px; background: var(--line); border-radius: 3px; }
+  .meter::after { content: ""; position: absolute; left: 50%; top: -3px; width: 1px; height: 12px; background: var(--soft); }
+  .needle { position: absolute; top: -3px; width: 4px; height: 12px; margin-left: -2px; left: 50%; background: var(--made); border-radius: 2px; transition: left 120ms linear; }
+  svg.curve { width: 100%; height: 92px; margin-top: 8px; display: block; }
+  svg text { font: 10px var(--mono); fill: var(--soft); }
+  footer { max-width: 1280px; margin: 0 auto; padding: 0 24px 28px; color: var(--soft); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>KEMUDI</h1>
+  <p id="model">Loading the calibration…</p>
+  <button id="theme" aria-label="Switch between light and dark">Dark</button>
+</header>
+<main>
+  <section>
+    <textarea id="story" aria-label="Story opening" spellcheck="false">Mara had locked the kitchen an hour ago. Now she stood in the hallway and</textarea>
+    <div class="bar">
+      <button class="primary" id="write">Write</button>
+      <button id="compare" title="Same seed twice: knobs at zero, then knobs as set">Compare with zero</button>
+      <button id="stop" disabled>Stop</button>
+      <label>seed <input id="seed" type="number" value="7"></label>
+      <label>tokens <input id="tokens" type="number" value="140" min="10" max="400"></label>
+      <span class="status" id="status" role="status"></span>
+    </div>
+    <div class="pages" id="pages"><div class="page" id="page"></div></div>
+    <p class="legend">Text in <b>this colour</b> was written while at least one knob was away from zero. Move a knob while the model writes: the next token already uses it, and nothing is sent to the model as text.</p>
+  </section>
+  <aside>
+    <h2>Knobs <button id="reset">All to zero</button></h2>
+    <div id="axes"></div>
+  </aside>
+</main>
+<footer id="footer"></footer>
+<script>
+const $ = (id) => document.getElementById(id)
+const state = { info: null, knobs: {}, cards: {}, running: null }
+
+init()
+
+async function init() {
+  setTheme(localStorage.getItem("kemudi-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"))
+  $("theme").onclick = () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark")
+  $("write").onclick = () => run(false)
+  $("compare").onclick = () => run(true)
+  $("stop").onclick = stop
+  $("reset").onclick = () => Object.keys(state.cards).forEach((name) => setDose(name, 0))
+
+  state.info = await (await fetch("/api/info")).json()
+  const summary = state.info.summary
+  $("model").textContent = `${summary.model} · ${summary.blocks} blocks · vectors added to the residual stream`
+  for (const [name, axis] of Object.entries(summary.axes)) $("axes").append(axisCard(name, axis))
+  const settings = summary.settings
+  $("footer").textContent = settings
+    ? `Green band: doses where the measured perplexity stayed under ${settings.max_perplexity_ratio}x of dose 0 and the text did not start repeating (${summary.axes[Object.keys(summary.axes)[0]].steering[0].samples} story openings per dose, ${settings.max_new_tokens} tokens each). A dose is a fraction of the typical size of the model's hidden state at that block.`
+    : "These vectors have not been measured yet. Run: kemudi measure"
+}
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme
+  localStorage.setItem("kemudi-theme", theme)
+  $("theme").textContent = theme === "dark" ? "Light" : "Dark"
+}
+
+function axisCard(name, axis) {
+  const doses = (axis.steering || []).map((point) => point.dose)
+  const limit = doses.length ? Math.max(...doses.map(Math.abs)) : 0.8
+  const usable = axis.usable || [0, 0]
+  const percent = (dose) => ((dose + limit) / (2 * limit)) * 100
+  const card = document.createElement("div")
+  card.className = "axis"
+  card.innerHTML = `
+    <header><h3>${name}</h3><span class="dose" data-dose>+0.00</span></header>
+    <div class="poles"><span>${axis.low}</span><span>block ${axis.layer}</span><span>${axis.high}</span></div>
+    <div class="track">
+      <div class="band all"></div>
+      <div class="band usable" style="left:${percent(usable[0])}%; width:${percent(usable[1]) - percent(usable[0])}%"></div>
+      <input type="range" min="${-limit}" max="${limit}" step="0.01" value="0" aria-label="${name}: ${axis.low} to ${axis.high}">
+    </div>
+    <div class="note" data-note></div>
+    <div class="gauge"><span>text reads</span><div class="meter"><div class="needle" data-needle></div></div></div>
+    ${curve(axis, limit)}`
+  const slider = card.querySelector("input")
+  slider.oninput = () => setDose(name, Number(slider.value))
+  state.cards[name] = { card, slider, axis, usable, limit, percent }
+  state.knobs[name] = 0
+  setDose(name, 0, true)
+  return card
+}
+
+function curve(axis, limit) {
+  const points = axis.steering
+  if (!points) return ""
+  const width = 340, height = 92, left = 30, right = 8, top = 8, bottom = 20
+  const top_value = Math.max(0.2, ...points.map((point) => point.effect_ci[1]))
+  const x = (dose) => left + ((dose + limit) / (2 * limit)) * (width - left - right)
+  const y = (value) => top + (1 - value / top_value) * (height - top - bottom)
+  const upper = points.map((point) => `${x(point.dose)},${y(point.effect_ci[1])}`)
+  const lower = points.map((point) => `${x(point.dose)},${y(point.effect_ci[0])}`).reverse()
+  const line = points.map((point) => `${x(point.dose)},${y(point.effect)}`).join(" ")
+  const [low, high] = axis.usable
+  const label = axis.metric === "quoted_share" ? "share of text in quotes" : `judge scale, 0 ${axis.low} to 1 ${axis.high}`
+  return `<svg class="curve" viewBox="0 0 ${width} ${height}" role="img" aria-label="Measured effect of ${axis.high} by dose">
+    <rect x="${x(low)}" y="${top}" width="${x(high) - x(low)}" height="${height - top - bottom}" fill="var(--go-soft)"/>
+    <polygon points="${upper.concat(lower).join(" ")}" fill="var(--soft)" opacity="0.25"/>
+    <polyline points="${line}" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+    <line data-marker x1="${x(0)}" x2="${x(0)}" y1="${top}" y2="${height - bottom}" stroke="var(--made)" stroke-width="2" data-left="${left}" data-span="${width - left - right}"/>
+    <text x="${left - 4}" y="${top + 8}" text-anchor="end">${top_value.toFixed(1)}</text>
+    <text x="${left - 4}" y="${height - bottom}" text-anchor="end">0</text>
+    <text x="${left}" y="${height - 5}">measured: ${label}</text>
+  </svg>`
+}
+
+function setDose(name, dose, quiet) {
+  const { card, slider, axis, usable, limit } = state.cards[name]
+  slider.value = dose
+  state.knobs[name] = dose
+  card.querySelector("[data-dose]").textContent = (dose >= 0 ? "+" : "") + dose.toFixed(2)
+  const note = card.querySelector("[data-note]")
+  const outside = dose < usable[0] - 1e-9 || dose > usable[1] + 1e-9
+  note.className = "note" + (outside ? " warn" : "")
+  note.textContent = !axis.steering ? "Not measured yet."
+    : axis.measurable === false ? "The check of this axis's judge failed, so its effect is not measured."
+    : outside ? "Past the measured fluent range: expect broken or repeating text."
+    : dose === 0 ? "" : "Inside the measured fluent range."
+  const marker = card.querySelector("[data-marker]")
+  if (marker) {
+    const position = Number(marker.dataset.left) + ((dose + limit) / (2 * limit)) * Number(marker.dataset.span)
+    marker.setAttribute("x1", position)
+    marker.setAttribute("x2", position)
+  }
+  if (!quiet && state.running && !state.running.locked) post("/api/knobs", { knobs: state.knobs })
+}
+
+function post(path, body, signal) {
+  return fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body), signal })
+}
+
+function showGauges(readings) {
+  for (const [name, value] of Object.entries(readings)) {
+    const clamped = Math.max(-1.6, Math.min(1.6, value))
+    state.cards[name].card.querySelector("[data-needle]").style.left = `${50 + (clamped / 1.6) * 50}%`
+  }
+}
+
+async function run(compare) {
+  await stop()
+  const story = $("story").value
+  const pages = $("pages")
+  pages.className = "pages" + (compare ? " two" : "")
+  pages.innerHTML = compare
+    ? `<div class="page"><h2>Knobs at zero</h2></div><div class="page"><h2>Knobs as set</h2></div>`
+    : `<div class="page"></div>`
+  const runs = compare ? [{}, { ...state.knobs }] : [{ ...state.knobs }]
+  const controller = new AbortController()
+  state.running = { controller, locked: compare }
+  $("stop").disabled = false
+  try {
+    for (const [index, knobs] of runs.entries()) {
+      await writeInto(pages.children[index], story, knobs, compare, controller.signal)
+    }
+  } catch (error) {
+    if (error.name !== "AbortError") $("status").textContent = `Stopped: ${error.message}`
+  } finally {
+    if (state.running?.controller === controller) state.running = null
+    $("stop").disabled = !state.running
+  }
+}
+
+async function writeInto(page, story, knobs, locked, signal) {
+  const given = document.createElement("span")
+  given.className = "given"
+  given.textContent = story.trimEnd() + " "
+  page.append(given)
+  const request = { story, knobs, locked, seed: Number($("seed").value), tokens: Number($("tokens").value) }
+  const response = await post("/api/generate", request, signal)
+  const reader = response.body.pipeThrough(new TextDecoderStream()).getReader()
+  let buffer = ""
+  while (true) {
+    const { done, value } = await reader.read()
+    if (done) return
+    buffer += value
+    const lines = buffer.split("\n")
+    buffer = lines.pop()
+    for (const line of lines) {
+      if (!line) continue
+      const event = JSON.parse(line)
+      if (event.done) {
+        $("status").textContent = `${event.tokens} tokens in ${event.seconds} s (${(event.tokens / event.seconds).toFixed(1)} per second)`
+        continue
+      }
+      const live = locked ? knobs : state.knobs
+      const piece = document.createElement("span")
+      if (Object.values(live).some((dose) => dose !== 0)) piece.className = "steered"
+      piece.textContent = event.t
+      page.append(piece)
+      showGauges(event.g)
+    }
+  }
+}
+
+async function stop() {
+  if (!state.running) return
+  state.running.controller.abort()
+  state.running = null
+  $("stop").disabled = true
+  await post("/api/stop", {})
+}
+</script>
+</body>
+</html>

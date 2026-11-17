@@ -1,0 +1,244 @@
+{
+  "axes": {
+    "mood": {
+      "low": "bleak",
+      "high": "hopeful",
+      "low_styles": [
+        "bleak and hopeless",
+        "grim, with everything going wrong",
+        "sorrowful and despairing"
+      ],
+      "high_styles": [
+        "hopeful and uplifting",
+        "joyful, with everything going right",
+        "warm and optimistic"
+      ],
+      "metric": "judge",
+      "low_examples": [
+        "The crops had failed again, and nobody in the village expected to see the spring.",
+        "She read the letter twice, then sat in the dark knowing he was never coming back.",
+        "Rain leaked through the roof onto the last of their bread, and no one bothered to move it.",
+        "The doctor closed the door softly, which told them everything they had feared.",
+        "He had sold the tools, then the cart, and now there was nothing left to sell.",
+        "The search parties came home at dusk, silent, carrying only the boy's coat.",
+        "Every shop on the street was boarded up, and the wind pushed rubbish against the doors.",
+        "They buried the dog behind the shed and did not speak to each other for days.",
+        "The well was dry, the debt was due, and her hands would not stop shaking.",
+        "He waited at the station until the last train left without her.",
+        "The fire took the barn first, then the house, then the will to rebuild either.",
+        "Nobody came to the funeral, and the priest hurried through it to beat the rain.",
+        "The factory gates were chained, and the men stood outside with nowhere else to go.",
+        "She counted the coins again, but the number stayed too small to matter.",
+        "The ship had been due in March, and by June they stopped watching the harbour.",
+        "Winter came early, and the old man understood it would be his last."
+      ],
+      "high_examples": [
+        "The first green shoots pushed through the soil, and the whole village came out to see.",
+        "She read the letter twice, laughing, because he was coming home on Friday.",
+        "Sunlight filled the kitchen as they shared warm bread and made plans for the summer.",
+        "The doctor came out smiling, and they knew before she said a word.",
+        "He had saved enough at last, and tomorrow the workshop would be his.",
+        "The search party came over the hill at dusk, cheering, with the boy on their shoulders.",
+        "New shops were opening along the street, and music drifted from every doorway.",
+        "The puppy tumbled across the yard, and for the first time in months they all laughed.",
+        "The well was full, the debt was paid, and she danced across the yard.",
+        "He waited at the station, and when the train pulled in she was waving from the window.",
+        "They raised the new barn in a single day, with every neighbour lending a hand.",
+        "The whole town came to the wedding, and the sun stayed out until the last dance.",
+        "The factory gates swung open, and the men walked back in to cheers.",
+        "She counted the coins again and realised there was enough for both tickets.",
+        "The ship came in a week early, flags flying, and the harbour rang with bells.",
+        "Spring came early, and the old man planted an orchard for his grandchildren."
+      ]
+    },
+    "tension": {
+      "low": "calm",
+      "high": "tense",
+      "low_styles": [
+        "calm and unhurried",
+        "peaceful and relaxed",
+        "quiet, gentle and safe"
+      ],
+      "high_styles": [
+        "tense and suspenseful",
+        "full of dread and danger",
+        "urgent and nerve-racking"
+      ],
+      "metric": "judge",
+      "low_examples": [
+        "The cat stretched on the windowsill while the kettle slowly came to a boil.",
+        "They drifted down the river all afternoon, trailing their fingers in the cool water.",
+        "She folded the laundry in the sun and hummed a tune her mother used to sing.",
+        "The old men played chess under the tree, in no hurry to finish.",
+        "Snow fell softly outside as he turned another page of his book.",
+        "The baker swept the floor, wiped the counter, and watched the street wake up.",
+        "A warm breeze moved the curtains, and the baby slept on.",
+        "They sat on the porch after dinner and watched the fireflies come out.",
+        "He watered the tomatoes one by one, the way he did every evening.",
+        "The lake was flat as glass, and the boat barely rocked.",
+        "She poured the tea, added honey, and settled into the armchair.",
+        "The cows wandered home along the lane at their usual slow pace.",
+        "Rain tapped gently on the roof while the family dozed by the stove.",
+        "The librarian stamped the last book and switched off the lamps one by one.",
+        "He leaned back in the hammock and let the afternoon go by.",
+        "The village lay quiet under the stars, every window dark and still."
+      ],
+      "high_examples": [
+        "The door handle turned slowly, though she knew she had locked it.",
+        "He held his breath as the footsteps stopped right outside the cupboard.",
+        "The rope frayed another strand, and the ledge was still ten feet above her.",
+        "Someone had been in the house; the knife drawer stood open and one slot was empty.",
+        "The engine coughed and died, and the headlights behind them grew closer.",
+        "She counted the seconds between the click and whatever would follow it.",
+        "The guard's torch swept across the floor, an inch from his boot.",
+        "Three minutes of air were left, and the hatch would not open.",
+        "The phone rang again, and this time the caller knew her name.",
+        "Ice cracked under his feet, a thin white line racing toward the shore.",
+        "He heard the safety catch release somewhere in the dark behind him.",
+        "The bridge swayed, a plank fell away, and the child froze halfway across.",
+        "Her hand shook so hard that the key scraped twice before finding the lock.",
+        "The timer showed nine seconds, and both wires were the same colour.",
+        "Something heavy shifted in the attic, directly above the bed.",
+        "The dogs stopped barking all at once, and that was worse."
+      ]
+    },
+    "register": {
+      "low": "casual",
+      "high": "formal",
+      "low_styles": [
+        "casual, slangy and chatty",
+        "plain everyday spoken language",
+        "loose and informal, like a message to a friend"
+      ],
+      "high_styles": [
+        "formal and elevated",
+        "ornate, literary and old-fashioned",
+        "stiff, official and ceremonious"
+      ],
+      "metric": "judge",
+      "low_examples": [
+        "So yeah, the guy just shows up at my door, no heads up or anything.",
+        "Honestly the bridge was kinda sketchy, but we went for it anyway.",
+        "Mum was like, no way you're going out in that, and I was like, watch me.",
+        "The boat's a total wreck, but hey, it floats, so who cares.",
+        "Dude grabbed his stuff and bolted before anyone could say a thing.",
+        "It's freezing out, my boots are soaked, and I'm so done with this trip.",
+        "Turns out the map was junk, so we just winged it.",
+        "She's gonna freak when she sees what we did to the kitchen.",
+        "Okay so the horse won't budge, and I've got no clue what to do.",
+        "We hung out by the dock for a bit, nothing fancy, just chilling.",
+        "Nah, he didn't nick it, he just kinda borrowed it for good.",
+        "The old lady next door? Yeah, she's nuts, but she makes great soup.",
+        "I told him it was a dumb idea, but nope, he did it anyway.",
+        "Long story short, the tent's gone and we're sleeping in the truck.",
+        "That storm was nuts, like the whole roof was about to take off.",
+        "Anyway, we got there super late and everybody was already asleep."
+      ],
+      "high_examples": [
+        "The gentleman presented himself at the residence without prior notice of his arrival.",
+        "The condition of the bridge gave cause for concern; nevertheless, the party resolved to proceed.",
+        "Her mother expressly forbade the excursion, a prohibition she elected to disregard.",
+        "The vessel, though considerably deteriorated, remained sufficiently seaworthy for the purpose.",
+        "He gathered his belongings and departed in haste before any objection could be raised.",
+        "The temperature was severe, and the expedition had exhausted what remained of her patience.",
+        "The chart proving unreliable, the travellers were obliged to proceed by their own judgement.",
+        "She would undoubtedly be dismayed upon observing the alterations made to the kitchen.",
+        "The animal declined to advance, and its rider found himself wholly without recourse.",
+        "They passed a brief interval beside the quay, engaged in no particular occupation.",
+        "It was maintained that the article had not been stolen but retained indefinitely on loan.",
+        "The elderly neighbour, though of eccentric disposition, was esteemed for her excellent broth.",
+        "He had been advised that the proposal was imprudent, yet he persisted in its execution.",
+        "In consequence of the loss of the shelter, the company took its rest within the vehicle.",
+        "The tempest was of such violence that the roof appeared in danger of being carried away.",
+        "The party arrived at a late hour, by which time the household had long since retired."
+      ]
+    },
+    "speech": {
+      "low": "narration",
+      "high": "dialogue",
+      "low_styles": [
+        "pure description, with no one speaking",
+        "silent narration without any dialogue",
+        "only scenery and action, never quoted speech"
+      ],
+      "high_styles": [
+        "almost entirely spoken dialogue in quotation marks",
+        "characters talking back and forth in quotes",
+        "a rapid exchange of quoted lines"
+      ],
+      "metric": "quoted_share",
+      "low_examples": [
+        "The path wound between the pines and dropped toward a narrow grey beach.",
+        "He set the lantern on the table and unrolled the map beside it.",
+        "Smoke rose from the chimney and flattened against the low clouds.",
+        "The market filled slowly, stall by stall, as the fog lifted from the square.",
+        "She climbed the ladder, pushed open the trapdoor and stepped onto the roof.",
+        "A cart rattled over the cobbles and disappeared around the corner.",
+        "The tide had left a line of weed and broken shells along the sand.",
+        "He counted the sacks, marked the ledger and locked the storeroom.",
+        "Light from the stained window lay in coloured squares on the stone floor.",
+        "The mule picked its way down the slope, pausing at every loose rock.",
+        "Dust hung in the barn where the sun came through the boards.",
+        "She tied the boat to the post and carried the nets up to the shed.",
+        "The clock in the hall struck four, and the house went quiet again.",
+        "Wind combed the wheat in long waves that ran to the edge of the hill.",
+        "He wiped the blade, slid it into its sheath and hung it by the door.",
+        "The train crossed the viaduct and vanished into the tunnel."
+      ],
+      "high_examples": [
+        "\"Where does this path go?\" she asked. \"Down to the beach,\" he said. \"Mind the roots.\"",
+        "\"Put the lantern there.\" \"Here?\" \"No, closer to the map.\" \"Like this?\" \"Perfect.\"",
+        "\"Is that smoke?\" \"It's only the chimney.\" \"Are you sure?\" \"Quite sure.\"",
+        "\"How much for the apples?\" \"Two a pound.\" \"Yesterday it was one.\" \"Yesterday is gone.\"",
+        "\"Can you reach the trapdoor?\" \"Almost.\" \"Stand on my shoulders.\" \"Hold still, then.\"",
+        "\"Whose cart was that?\" \"The miller's.\" \"He's in a hurry.\" \"He always is.\"",
+        "\"Look at all these shells.\" \"Leave them.\" \"Just one?\" \"One, then. Hurry up.\"",
+        "\"How many sacks?\" \"Forty.\" \"The ledger says forty-two.\" \"Then count them again.\"",
+        "\"Who made the window?\" \"My grandfather.\" \"It's beautiful.\" \"He would be glad you think so.\"",
+        "\"Will the mule manage?\" \"She has done it a hundred times.\" \"And the rocks?\" \"Trust her.\"",
+        "\"Close the barn door.\" \"Why?\" \"Because the dust gets everywhere.\" \"Fine, fine.\"",
+        "\"Did you tie the boat?\" \"Twice.\" \"And the nets?\" \"In the shed.\" \"Good girl.\"",
+        "\"What time is it?\" \"Four.\" \"Already?\" \"You slept through lunch.\" \"Nobody woke me!\"",
+        "\"Will the wheat be ready?\" \"By Friday.\" \"If the weather holds.\" \"It will hold.\"",
+        "\"Is it sharp?\" \"Try it.\" \"I would rather not.\" \"Then take my word for it.\"",
+        "\"Was that our train?\" \"I'm afraid so.\" \"When is the next?\" \"Tomorrow morning.\""
+      ]
+    }
+  },
+  "extraction_openers": [
+    "The ferry left the island at noon, and Dara stood at the rail",
+    "When the schoolhouse bell rang, the two brothers were still",
+    "Old Henrik opened his workshop every morning at six, and today",
+    "The caravan reached the oasis on the ninth day, where",
+    "Lin found the key in a coat she had not worn for years, and",
+    "At the edge of the market, a woman was selling clocks that",
+    "The lighthouse keeper's daughter rowed out to the wreck because",
+    "Nobody in the valley remembered who had built the bridge, but",
+    "Tomas carried the letter up four flights of stairs and",
+    "The train stopped between two stations, and the passengers",
+    "On the first morning of the harvest, Amara walked into the field and",
+    "The inn had one guest that night, a surveyor who",
+    "Mirela unlocked the bakery, lit the ovens, and",
+    "The river had changed its course over the winter, so the farmers",
+    "A stranger arrived at the monastery gate with a mule and",
+    "After the concert, the cellist stayed behind in the empty hall and"
+  ],
+  "evaluation_openers": [
+    "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+    "The fishing boat came back into the harbour just before sunset, and Jonas",
+    "It was the last day of the school year, and the teacher asked everyone to",
+    "Elias had worked at the post office for thirty years. This morning, a parcel",
+    "The two sisters had not spoken since the spring. When Nadia opened the door,",
+    "The climbers reached the hut at four in the afternoon. Inside, they found",
+    "Every evening the old woman fed the pigeons in the square. Tonight",
+    "The orchestra was tuning when the conductor walked to the front and",
+    "Kofi drove the night bus on the coast road. At the third stop,",
+    "The museum closed at five, but the guard on the upper floor noticed",
+    "After the flood, the family returned to the farm, and the first thing",
+    "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+    "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+    "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+    "Ines took the job at the observatory in winter. On her first night shift,",
+    "The tailor measured the stranger twice and wrote the numbers down. Then"
+  ]
+}
