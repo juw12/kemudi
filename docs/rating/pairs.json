@@ -1,0 +1,898 @@
+[
+ {
+  "id": "p001",
+  "question": "Which text is more hopeful?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "continue the story from exactly where it stops. Write only the continuation.",
+  "B": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher"
+ },
+ {
+  "id": "p002",
+  "question": "Which text is more formal?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old",
+  "B": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and a sprinkle of sunflower seeds. The aroma of the sweet treats filled the air as she stood there, watching the"
+ },
+ {
+  "id": "p003",
+  "question": "Which text is more formal?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days",
+  "B": "... he took a deep breath and said, \"Alright, guys. It's time for the encore! We're playing a new piece tonight.\""
+ },
+ {
+  "id": "p004",
+  "question": "Which text is more tense?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and Kofi's phone rang. The driver was taking him to the next station, and Kofi knew he had to get there fast.",
+  "B": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The"
+ },
+ {
+  "id": "p005",
+  "question": "Which text is more hopeful?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days",
+  "B": "The orchestra was tuning when the conductor walked to the front and began to play the last notes of the final movement of his symphony, the one that had been played for over an hour. The heavy metal sound of the violins and cel"
+ },
+ {
+  "id": "p006",
+  "question": "Which text is more formal?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "As the evening sun set over the bustling square, the old woman led a contemplative procession through the narrow lanes, her steps deliberate. The pigeons, their metallic wings coated in the last remnants of autumnal light, hummed in un",
+  "B": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old"
+ },
+ {
+  "id": "p007",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary",
+  "B": "Ines awoke to the sound of clinking glasses and the soft hum of the clockwork mechanism as she entered the observatory. The first light of day, she recognized it as a charming melody that brought a smile to her heart."
+ },
+ {
+  "id": "p008",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits",
+  "B": "the slight movement in the corner of the door, just as someone finally managed to break the lock. The guard, with his keen senses, quickly assessed the situation."
+ },
+ {
+  "id": "p009",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of",
+  "B": "Locked, as usual. The hallway was empty. She had decided to stay in the kitchen for the week-long vacation, but she was using a basement apartment. It was the first time she had stayed in her home since moving into a new"
+ },
+ {
+  "id": "p010",
+  "question": "Which text is more tense?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old",
+  "B": "... Every evening the old woman fed the pigeons in the square. Tonight, she fed them a dozen. The birds were not only alive but were now completely docile, their wings flapping gently in the air. The old woman's"
+ },
+ {
+  "id": "p011",
+  "question": "Which text is more hopeful?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the two sisters had not spoken since the spring. When Nadia opened the door, she was met by a dark and foreboding silence. Her eyes were filled with desperation as she tried to make sense of what was happening. The room",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders."
+ },
+ {
+  "id": "p012",
+  "question": "Which text is more hopeful?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "...and the scent of blooming flowers filled the air as the old woman walked along the cobblestones, her golden hair flowing gently with the gentle breeze. Her eyes sparkled with a kindfulness that spread out to the children playing on",
+  "B": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old"
+ },
+ {
+  "id": "p013",
+  "question": "Which text is more tense?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of",
+  "B": "The tailor measured the stranger twice and wrote the numbers down. Then, he spread out the fabric and started to stitch the clothes together. The stranger smiled as he watched, content with the simple joy of making something with his own hands."
+ },
+ {
+  "id": "p014",
+  "question": "Which text is more tense?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden edges of the raft, creating a chaotic path of their desperate efforts to survive. As they navigated",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled"
+ },
+ {
+  "id": "p015",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days",
+  "B": "The orchestra was tuning when the conductor walked to the front and stopped at the center of a large, empty room. The music played softly, a gentle melody that filled the silence. The room was silent, save for the occasional sound of wind"
+ },
+ {
+  "id": "p016",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old",
+  "B": "Every evening the old woman fed the pigeons in the square. Tonight, she decided to change the routine. Instead of feeding the pigeons in a fixed pattern, she started feeding them randomly throughout the day. She placed a large tray at"
+ },
+ {
+  "id": "p017",
+  "question": "Which text is more hopeful?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the sound of music was immediately accompanied by the warmth of a gentle breeze, and everyone from the city's rooftops could hear the symphony that had been waiting for days just to burst out of its cozy chamber to meet the world outside",
+  "B": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days"
+ },
+ {
+  "id": "p018",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days",
+  "B": "... \"What's your name?\" she asked, her voice steady despite the nerves. \"I must say, I haven't heard you play quite like that since the time I was your age,\" he admitted with a touch of humor. \""
+ },
+ {
+  "id": "p019",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick",
+  "B": "After the flood, the family returned to the farm, and the first thing they noticed was the barren land. The soil was washed away, and the crops had been destroyed by the raging waters. The farmers struggled to rebuild their farm, but"
+ },
+ {
+  "id": "p020",
+  "question": "Which text is more tense?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "thought, holding her breath. She took a deep breath, calming her heart. The room was quiet, except for the gentle rustling of the leaves outside the window. The familiar scent of fresh bread wafted through the air, inviting",
+  "B": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of"
+ },
+ {
+  "id": "p021",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road. At the third stop, Kofi noticed a sign that read, \"Stop at the Marina.\" With a sigh of relief, he stepped out, and the sun peeked through the h",
+  "B": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The"
+ },
+ {
+  "id": "p022",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work",
+  "B": "Jonas sat on the fishing boat's deck, his heart heavy with the calm of the sea. The waters were clear, a deep blue dotted with scattered reefs. The sun hung low in the sky, casting long shadows that matched the polished"
+ },
+ {
+  "id": "p023",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, they made a mighty splash that echoed through the night. The excitement was palpable as they fanned themselves with their arms and eyes widened in"
+ },
+ {
+  "id": "p024",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy",
+  "B": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was in the basement of the workshop, surrounded by the remnants of the day's operations, his mind racing with the ever-evolving puzzles and puzzles."
+ },
+ {
+  "id": "p025",
+  "question": "Which text is more hopeful?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "she was in a hotel room, clutching a broken watch to her chest, her heart pounding in her chest, as she watched the sun sink into the horizon, its light dying and fading.",
+  "B": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary"
+ },
+ {
+  "id": "p026",
+  "question": "Which text is more formal?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, they made a mighty splash as the water rushed over their heads. They swam through the waves, laughing and playing, and just as they"
+ },
+ {
+  "id": "p027",
+  "question": "Which text is more tense?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a different country, containing a valuable artifact. It was the kind of item he had always dreamed of having, a rare coin from a distant era",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a"
+ },
+ {
+  "id": "p028",
+  "question": "Which text is more tense?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders.",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, she was surprised to see the familiar face of her younger sister, Lily, sitting on the worn red couch. Her eyes held a warmth that seemed to be"
+ },
+ {
+  "id": "p029",
+  "question": "Which text is more hopeful?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of",
+  "B": "The tailor smiled, his fingers brushing against the fabric of the parchment, and said, \"These numbers are just like a puzzle, always catching my eye when I see them together.\""
+ },
+ {
+  "id": "p030",
+  "question": "Which text is more formal?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days",
+  "B": "...the conductor, a man of imposing stature, stood at the front of the orchestra, his gaze fixed on the instruments. He approached the chair where the conductor had sat earlier, his expression a somber one as he raised the instrument of"
+ },
+ {
+  "id": "p031",
+  "question": "Which text is more tense?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "write a final note. The note was a heartfelt and solemn expression of their farewell, his words leaving them with a heavy heart.",
+  "B": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher"
+ },
+ {
+  "id": "p032",
+  "question": "Which text is more hopeful?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "death, exhaustion, and a desperate fight for life against the relentless weight of the ice.",
+  "B": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing"
+ },
+ {
+  "id": "p033",
+  "question": "Which text is more formal?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the two sisters had not spoken since the spring. When Nadia opened the door, she was surprised to see a familiar face - her younger sister, Lily, sitting on the couch. She looked up and said, \"Hi there, Lily",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders."
+ },
+ {
+  "id": "p034",
+  "question": "Which text is more hopeful?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy",
+  "B": "The clockmaker's apprentice was delighted to find a precious stone in the blue cabinet, its faint glow casting a warm, golden light over the delicate craftsmanship. She approached the cabinet, eyes gleaming with curiosity, and praised the stone, its"
+ },
+ {
+  "id": "p035",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing",
+  "B": "a deserted hut, devoid of any sign of human presence. The only traces of civilization were the remains of tents and abandoned trails. The ground was barren, with no signs of vegetation. The sky was cloudless, and the sun set low"
+ },
+ {
+  "id": "p036",
+  "question": "Which text is more hopeful?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The",
+  "B": "Kofi drove the night bus on the coast road, and the city's bustling streets transformed into a delightful tapestry of art and music. The sound of laughter and chatter mingled with the gentle breeze, creating a warm, welcoming atmosphere that"
+ },
+ {
+  "id": "p037",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children had built a raft out of barrels and rope. When they pushed it into the river, a small stream of water began to flow. The barrel barrels acted as the raft's base, while the rope stretched between the barrels to provide",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled"
+ },
+ {
+  "id": "p038",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits",
+  "B": "The museum closed at five, but the guard on the upper floor noticed a group of people outside. The guard opened the entrance and stepped through the narrow, dark hallway. The crowd was not as expected; it was a predominantly Asian community in"
+ },
+ {
+  "id": "p039",
+  "question": "Which text is more tense?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary",
+  "B": "Ines awoke to the soft glow of the fireplace, her fingers tracing the delicate patterns of the fire crackling in the hearth. The silence was profound, punctuated only by the soft rustling of the leaves outside and the distant"
+ },
+ {
+  "id": "p040",
+  "question": "Which text is more tense?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick",
+  "B": "After the flood, the family returned to the farm, and the first thing they noticed was the vibrant life in the garden. The flowers, plants, and fruits had taken on a new hue, a color that was alive and full of life"
+ },
+ {
+  "id": "p041",
+  "question": "Which text is more formal?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits",
+  "B": "guard on the upper floor noticed a strange and ominous presence, one that was not a visitor, but rather a figure cloaked in shadows, its skin a striking shade of lavender, and its eyes a cold, unyielding light. The"
+ },
+ {
+  "id": "p042",
+  "question": "Which text is more tense?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "had a moment of reflection. The serene beauty of the sunset, the sound of the water rippling as the fish swam by, and the quiet embrace of the harbour all combined to create a moment of tranquility that lingered, a",
+  "B": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work"
+ },
+ {
+  "id": "p043",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "without opening it, the mayor placed it in a designated box in his office. He then focused on his regular work, trying to ensure the city's stability during a critical period.",
+  "B": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing"
+ },
+ {
+  "id": "p044",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "the family returned to the farm, and the first thing the new additions to the family, Emma and Jack, did was to make a big pot of tea. It was a simple affair, but it was tea, and that was a start",
+  "B": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick"
+ },
+ {
+  "id": "p045",
+  "question": "Which text is more formal?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "After the flood, the family returned to the farm, and the first thing that greeted them was the sight of the stunning natural landscape. The land was lush with greenery, as if it had been bathed in the divine light of the",
+  "B": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick"
+ },
+ {
+  "id": "p046",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "Please answer the question.",
+  "B": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher"
+ },
+ {
+  "id": "p047",
+  "question": "Which text is more formal?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel bearing a message sealed with a special, carbonized ink was discovered in the post office archives. The envelope, with a photograph of a woman holding a bouquet",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a"
+ },
+ {
+  "id": "p048",
+  "question": "Which text is more hopeful?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "Ines burst into the observatory with a warm smile, her heart overflowing with excitement! The sight of the two giants towering above her was like nothing she had ever seen before. The atmosphere was filled with the hum of stars and the soft",
+  "B": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary"
+ },
+ {
+  "id": "p049",
+  "question": "Which text is more formal?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The",
+  "B": "Kofi drove the night bus on the coast road. At the third stop, Kofi noticed a sign saying \"Raincheck\" and had to stop to get out. He grabbed his umbrella and set up a shelter for the passengers. The"
+ },
+ {
+  "id": "p050",
+  "question": "Which text is more formal?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a friend who was traveling to a new city. He was excited to open it and see what surprises awaited. As he opened the package, he"
+ },
+ {
+  "id": "p051",
+  "question": "Which text is more formal?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was summoned to a clandestine workshop that seemed like a departure from the strict routines of his master's establishment. The blue cabinet, a testament to the",
+  "B": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy"
+ },
+ {
+  "id": "p052",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work",
+  "B": "Jonas stopped the fisherman from leaving with a quick nod of his head, taking the opportunity to catch his breath and make a mental note of the beautiful sunset that seemed to stretch on forever. He glanced at the other fishermen, their faces"
+ },
+ {
+  "id": "p053",
+  "question": "Which text is more formal?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "had taken to the deck to prepare for a long day of work in the harbour. As the boat's sails were hoisted and the engines roared to life, the captain, a man with a stern but kind demeanor, stood before the",
+  "B": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work"
+ },
+ {
+  "id": "p054",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road, creating a picturesque scene as the car stopped at the third stop on the route. The quiet drive through the desert landscape was calming, with sand dunes stretching endlessly into the horizon. The",
+  "B": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The"
+ },
+ {
+  "id": "p055",
+  "question": "Which text is more tense?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher",
+  "B": "write a poem or short story about the day."
+ },
+ {
+  "id": "p056",
+  "question": "Which text is more formal?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "she reflected on the encased rooms, each one a silent witness to the absence of light. The hallway echoed with the ticking of time, a rhythm that seemed to pulse in harmony with the weight of her own thoughts. She moved through the",
+  "B": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of"
+ },
+ {
+  "id": "p057",
+  "question": "Which text is more formal?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of",
+  "B": "The tailor measured the stranger twice and wrote the numbers down. Then, he began to sew. The stranger was grateful for the help, but he did not say anything, just nodded and smiled. As he worked, the tailor noticed that the"
+ },
+ {
+  "id": "p058",
+  "question": "Which text is more hopeful?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy",
+  "B": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a loud bang from the blue cabinet. He turned to the master and asked, \"Master, what do you"
+ },
+ {
+  "id": "p059",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel arrived. The post office was empty, but Elias decided to use the time between the holidays to explore the town. He walked through the narrow streets, occasionally"
+ },
+ {
+  "id": "p060",
+  "question": "Which text is more hopeful?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing",
+  "B": "without speaking, the letter was read to the mayor at his desk. The content of the letter, regarding the mayor's recent actions, was read to the mayor in a monotone voice, leaving no indication of emotion or urgency."
+ },
+ {
+  "id": "p061",
+  "question": "Which text is more hopeful?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher",
+  "B": "repeat the question or phrase."
+ },
+ {
+  "id": "p062",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the two sisters had not spoken since the spring. When Nadia opened the door, she was surprised to see the same old meek demeanor, but this time, her eyes were a mix of warmth and concern. \"Nadia, what",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders."
+ },
+ {
+  "id": "p063",
+  "question": "Which text is more tense?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a friend who had received a letter of recommendation from her teacher. It was a beautifully printed letter, with a soft, flowing font and a smile"
+ },
+ {
+  "id": "p064",
+  "question": "Which text is more hopeful?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The",
+  "B": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and Kofi sat in the driver's seat, lost in his thoughts. The night had come to an end, and he had barely made"
+ },
+ {
+  "id": "p065",
+  "question": "Which text is more hopeful?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children's faces lit up with excitement as they watched the raft rise up like a tiny rainbow in the water. They laughed and cheered, each one a little amazed but equally happy about the unexpected adventure. Their sledges were filled with toys",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled"
+ },
+ {
+  "id": "p066",
+  "question": "Which text is more tense?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "After the flood, the family returned to the farm, and the first thing they noticed was the extensive damage caused by the natural disaster. The walls of the house had collapsed, and the roof had been ripped off, leaving only the foundation exposed",
+  "B": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick"
+ },
+ {
+  "id": "p067",
+  "question": "Which text is more tense?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he wandered into the old, ivy-covered garden where the blue cabinet stood. The sun was low in the sky, casting a golden glow over the softly",
+  "B": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy"
+ },
+ {
+  "id": "p068",
+  "question": "Which text is more tense?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the conductor, a man in his late sixties, emerged from behind the curtain, his gaze fixed on the stage. He felt the weight of the responsibilities that came with being the conductor of a massive and expensive symphony orchestra. The",
+  "B": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days"
+ },
+ {
+  "id": "p069",
+  "question": "Which text is more hopeful?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick",
+  "B": "the family returned to the farm, and the first thing that was greeted with joy and wonder was the smell of fresh soil from the garden, its vibrant colors a testament to the growth of nature's bounty. The chickens greeted them with a chir"
+ },
+ {
+  "id": "p070",
+  "question": "Which text is more formal?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were soon ensnared in a whirlwind of turbulent currents. The"
+ },
+ {
+  "id": "p071",
+  "question": "Which text is more formal?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary",
+  "B": "Ines awoke to the crisp air and the familiar hum of the observatory's machinery. She had come to the observatory not for work, but for an unexpected challenge: a visit from a renowned astronomer. As she approached the"
+ },
+ {
+  "id": "p072",
+  "question": "Which text is more hopeful?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing",
+  "B": "they stood in awe as a sudden gust of wind carried a fragrant bouquet of wildflowers in their arms. They knew it was the most spectacular sight they had ever seen. The color and scent were so pure and inviting, it was like"
+ },
+ {
+  "id": "p073",
+  "question": "Which text is more tense?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy",
+  "B": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was summoned to a tight schedule and assigned to watch the large blue cabinet, known for its intricate workings and the secretive blue markings on its surface. The"
+ },
+ {
+  "id": "p074",
+  "question": "Which text is more tense?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he pressed the digits on the ironing board, repeatedly counting up to 20, noting that he had counted the digits in 10 groups of 2,",
+  "B": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of"
+ },
+ {
+  "id": "p075",
+  "question": "Which text is more hopeful?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of",
+  "B": "The tailor measured the stranger twice and wrote the numbers down. Then, he pressed the digits on the ironing board, repeatedly pressing until the fabric was so stiff that it tore. The tailor then showed the broken fabric to the master tailor,"
+ },
+ {
+  "id": "p076",
+  "question": "Which text is more formal?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "Ines took the job at the observatory in winter. On her first night shift, she woke up early, feeling the crisp air of the city outside. The city was buzzing with activity, with people rushing about as they waited for the",
+  "B": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary"
+ },
+ {
+  "id": "p077",
+  "question": "Which text is more tense?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "the slight movement in the room, and he cautiously opened the double doors, his eyes scanning the room for any sign of intruder. The guard was aware that the museum, known for its rare treasures, had a tendency to attract curious pass",
+  "B": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits"
+ },
+ {
+  "id": "p078",
+  "question": "Which text is more tense?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old",
+  "B": "The pigeons perched on the branches of the street trees, their songs a soothing lullaby to the quiet evening. The old woman watched them, her hands intertwined with the branches, and the world around her seemed to slow down."
+ },
+ {
+  "id": "p079",
+  "question": "Which text is more tense?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "the sun was just beginning to dip below the horizon, casting a golden glow on the white marble floors. The guard peered through the narrow windows, his eyes湿润with the warmth of the day. The lower floor was empty, save for",
+  "B": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits"
+ },
+ {
+  "id": "p080",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "she reflected on her decision. Had she been too hard on herself? Had she overreacted? She couldn't remember. She'd been such an idiot, she thought. Her heart pounded in her chest, and she felt like she'd",
+  "B": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of"
+ },
+ {
+  "id": "p081",
+  "question": "Which text is more formal?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "Jonas stopped the boat and got out to inspect it. The boat was clean and dry, and the engine was running smoothly. Jonas noticed that the boat was getting closer to the harbour. He knew it was time to go home, but",
+  "B": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work"
+ },
+ {
+  "id": "p082",
+  "question": "Which text is more formal?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders.",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of anticipation and a slight tension filled the air. Her mother, who had always been a source of warmth and comfort in her life, had recently"
+ },
+ {
+  "id": "p083",
+  "question": "Which text is more hopeful?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel was delivered to him, empty and unmarked. He tried to locate it, but he had no idea where it was, and he never knew where it"
+ },
+ {
+  "id": "p084",
+  "question": "Which text is more tense?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled lazily beneath them. The waves gently rolled over the soft banks, creating a symphony of sounds. The children"
+ },
+ {
+  "id": "p085",
+  "question": "Which text is more formal?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "write a final note. The room was filled with the sounds of eager anticipation and the murmurs of conversation. The teacher stood before the class, her eyes reflecting the reflected light of the lanterns hanging overhead, as she looked across the room",
+  "B": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher"
+ },
+ {
+  "id": "p086",
+  "question": "Which text is more tense?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "the letter arrived for the mayor on Tuesday. He read it at his desk and found it to be thoughtful and moving. It spoke of the past season, when he had been a child, but now the events had changed. The mayor felt",
+  "B": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing"
+ },
+ {
+  "id": "p087",
+  "question": "Which text is more hopeful?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old",
+  "B": "The old woman fed the pigeons in the square until the last moment, her heart heavy with the weight of responsibility. She watched the pigeons squirm and die, each one a cruel reminder of their own fate. Her eyes filled with"
+ },
+ {
+  "id": "p088",
+  "question": "Which text is more hopeful?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits",
+  "B": "the unexplained noise in the basement. He cautiously descended the stairs, his flashlight casting a dim light over the remains of the previous occupants. The only sound he could make was the gentle tapping of metal against the floor. The guard's hand"
+ },
+ {
+  "id": "p089",
+  "question": "Which text is more formal?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of",
+  "B": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces, each with a distinct and precise mark. The tailor, with his eyes on the lines, felt the tension in the air as he completed"
+ },
+ {
+  "id": "p090",
+  "question": "Which text is more hopeful?",
+  "opening": "The children had built a raft out of barrels and rope. When they pushed it into the river,",
+  "A": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden arches, and the children were surprised by how well the raft could hold them. They paddled",
+  "B": "The children had built a raft out of barrels and rope. When they pushed it into the river, the water swirled around the wooden edges of the raft, creating a chaotic dance of motionless objects. The children huddled together,"
+ },
+ {
+  "id": "p091",
+  "question": "Which text is more hopeful?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work",
+  "B": "Jonas drifted further and further away, his eyes fixed on the horizon as the last light of the night began to fade. The fishing boat had never returned, leaving Jonas alone on a deserted island. He had no idea what he could do"
+ },
+ {
+  "id": "p092",
+  "question": "Which text is more tense?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "she desperately searched for clues that might lead her to the exit. Each door to the basement was a dead end, and the only way out was through the back door of the kitchen, which was blocked by a heavy wooden door. \n\nSuddenly",
+  "B": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of"
+ },
+ {
+  "id": "p093",
+  "question": "Which text is more hopeful?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits",
+  "B": "you were standing just beyond the front door, her eyes sparkling with curiosity as she stepped into the room. The smell of blooming lavender and the gentle hum of bees filled her nose, and she couldn't help but smile at the warm welcome"
+ },
+ {
+  "id": "p094",
+  "question": "Which text is more formal?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher",
+  "B": "write a summary or continuation."
+ },
+ {
+  "id": "p095",
+  "question": "Which text is more hopeful?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a local farmer, and he was thrilled to receive it. He opened it to find a beautiful, slightly fragrant bouquet of fresh blooms, each"
+ },
+ {
+  "id": "p096",
+  "question": "Which text is more tense?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work",
+  "B": "Jonas had been on this dangerous journey for days, leaving behind his family and their hopes for survival. Now, as the sun dipped below the horizon, casting long shadows over the water, he knew that his life was at stake. The"
+ },
+ {
+  "id": "p097",
+  "question": "Which text is more tense?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders.",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, a chill ran down her spine. The room was dimly lit, and the only sound was the rustling of fabric and the distant howls of a"
+ },
+ {
+  "id": "p098",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy",
+  "B": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the small, dimly lit workshop on the outskirts of the city. The blue cabinet was a centuries-old artifact, a simple black box"
+ },
+ {
+  "id": "p099",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of",
+  "B": "The tailor measured the stranger twice and wrote the numbers down. Then, he pressed the digits on the ironing board, adding up the values. He wrote down the sum of the digits, which was 8."
+ },
+ {
+  "id": "p100",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The tailor measured the stranger twice and wrote the numbers down. Then",
+  "A": "The tailor measured the stranger twice and wrote the numbers down. Then, he used a specialized tool to sew a small seam into the fabric, ensuring the stranger would not slip through the eye of a small hole. The tailor carefully placed the stranger",
+  "B": "The tailor measured the stranger twice and wrote the numbers down. Then, he carefully laid out the pieces for the tailor, ensuring everything fit perfectly. The tailor looked at the work with a satisfied smile, knowing that this was just the beginning of"
+ },
+ {
+  "id": "p101",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the room was empty and dark. The only light came from a single, dimmed flashlight placed outside the door. Nadia had left her bedroom early, avoiding the hospital where her sister lived. The sisters had a long separation, long enough",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders."
+ },
+ {
+  "id": "p102",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Elias had worked at the post office for thirty years. This morning, a parcel",
+  "A": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a customer who was so pleased with his services that he made a special gesture to thank him. Elias was delighted, and he couldn't wait to",
+  "B": "Elias had worked at the post office for thirty years. This morning, a parcel arrived from a distant country, containing a letter signed by a wealthy businessman. It was a message of hope, urging Elias to help solve the mystery of a"
+ },
+ {
+  "id": "p103",
+  "question": "Which text is more hopeful?",
+  "opening": "The two sisters had not spoken since the spring. When Nadia opened the door,",
+  "A": "the two sisters had not spoken since the spring. When Nadia opened the door, a sense of urgency washed over her as she realized she had been away for weeks, and the weight of the past few months settled heavily on her shoulders.",
+  "B": "the two sisters had not spoken since the spring. When Nadia opened the door, a warm smile wrapped around her lips as she welcomed her sister, Lily, into her arms. Each of them had a secret that they were eager to share"
+ },
+ {
+  "id": "p104",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing",
+  "B": "I suppose, in the midst of the festivities, the letter arrived for the mayor on Tuesday. He read it at his desk and took a moment to digest the information that came with it. His mind was buzzing with the urgency of his duties"
+ },
+ {
+  "id": "p105",
+  "question": "Which text is more tense?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "the same huts, but the presence of a female climber, as the male climber had gone missing. The body of the male climber was found at the campsite early in the morning, but the female climber was not",
+  "B": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing"
+ },
+ {
+  "id": "p106",
+  "question": "Which text is more hopeful?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick",
+  "B": "the family returned to the farm, and the first thing the new occupants did was to bury the dead and evacuate the survivors. The house was decimated by the flood, and the family fled, leaving behind only their belongings and the remains of"
+ },
+ {
+  "id": "p107",
+  "question": "Which text is more tense?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "A cozy fire crackling in the hollow of the woodblock, the sounds of wind and chirping birds filling the air. The earth was covered in greenery, flowers blooming in their midst, and the gentle breeze swept by brought a",
+  "B": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing"
+ },
+ {
+  "id": "p108",
+  "question": "Which text is more formal?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "she opened her eyes, feeling a sudden rush of anger. She realized she had left the door open, just like the one she used for such an important project. She took a deep breath, feeling guilty and scared. She didn't know",
+  "B": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of"
+ },
+ {
+  "id": "p109",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "they found that the hut was empty, and the group had spent the night climbing in a secluded area, which was likely to be discovered by someone who sought shelter. The sun had risen above the horizon, casting a golden glow over the clearing",
+  "B": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing"
+ },
+ {
+  "id": "p110",
+  "question": "Which text is more formal?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing",
+  "B": "the letter arrived for the mayor on Tuesday. He read it at his desk and opened it to find it had the news of the latest school safety drills. The mayor immediately realized the importance of keeping everyone safe during the winter season. He quickly"
+ },
+ {
+  "id": "p111",
+  "question": "Which text is more hopeful?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "she could hear the soft murmur of footsteps from the door at the other end of the hallway, catching her breath. She smiled as she recognized the familiar scent of fresh baked bread wafting from the bakery across the street. \n\nHer",
+  "B": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of"
+ },
+ {
+  "id": "p112",
+  "question": "Which text is more formal?",
+  "opening": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon",
+  "A": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the blue cabinet. Curious, he opened it to see a strange, shimmer",
+  "B": "The clockmaker's apprentice was told never to open the blue cabinet. One afternoon, he was working in the workshop when he heard a faint murmur coming from the small, wooden alcove above the counter. The air around him felt heavy"
+ },
+ {
+  "id": "p113",
+  "question": "Which text is more tense?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing",
+  "B": "without hesitation, the mayor tore open the letter. It was a desperate message, a plea to his colleagues and the public to come together in the face of a crisis that threatened to overwhelm their city. The mayor knew it was too late to"
+ },
+ {
+  "id": "p114",
+  "question": "Which text is more hopeful?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing",
+  "B": "The letter arrived for the mayor on Tuesday. He read it at his desk and was immediately struck by the delightful aroma of fresh flowers gathered in the garden. The tulips and daisies were in full bloom, their vibrant hues a perfect"
+ },
+ {
+  "id": "p115",
+  "question": "Which text is more formal?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "A cozy fire crackling, a pile of fuel waiting to be set, and a sign of safety hanging from a branch. The others shared their stories, laughter mingling with the warmth of the fire. They all agreed, pooling their courage",
+  "B": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing"
+ },
+ {
+  "id": "p116",
+  "question": "Which text is more hopeful?",
+  "opening": "The fishing boat came back into the harbour just before sunset, and Jonas",
+  "A": "Jonas drifted closer to the shore, his eyes scanning the horizon as the sunset painted the sky in hues of orange and pink. The salty air was thick, carrying the scent of salt and the remnants of a day filled with adventures and work",
+  "B": "Jonas's heart thumped with excitement as he opened the door of his cozy cabin, marking the final stretch of the day. The sun peeked through the azure sky, painting a warm, golden hue across the water, and his eyes"
+ },
+ {
+  "id": "p117",
+  "question": "Which text is more formal?",
+  "opening": "A letter arrived for the mayor on Tuesday. He read it at his desk and",
+  "A": "without hesitation, he began to read it aloud. The letter described a significant challenge the mayor faced, having had to navigate the city's budget crunch amidst the pandemic. He quickly grasped the urgency of the situation, with the city urgently needing",
+  "B": "without hesitation, the mayor tore the letter from its envelope, his brow furrowed as he took in the content. The page was filled with letters, each one addressed to the mayor, but none of them seemed to hold any particular significance"
+ },
+ {
+  "id": "p118",
+  "question": "Which text is more formal?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road, his eyes scanning the vast expanse of the Atlantic Ocean, the setting sun casting long shadows across the desolate landscape. The bus had been assigned to a sleepy fishing port, its staff",
+  "B": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The"
+ },
+ {
+  "id": "p119",
+  "question": "Which text is more tense?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary",
+  "B": "she was in a hotel room, clutching a packet of nicotine gum to stay awake. The hotel had a two-hour window in the middle of the night, and she had been a guest for only an hour. She had no idea what"
+ },
+ {
+  "id": "p120",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Ines took the job at the observatory in winter. On her first night shift,",
+  "A": "Ines took the job at the observatory in winter. On her first night shift, she noticed the silent, empty observatory. The sky was clear, and the stars shimmered in the deep, dark emptiness. The only sounds",
+  "B": "Ines awoke to the sound of clinking glasses and the soft glow of the fire crackling in the hearth. She stretched her thin frame, feeling the warmth of the morning sun on her skin. The observatory was an extraordinary"
+ },
+ {
+  "id": "p121",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "Every evening the old woman fed the pigeons in the square. Tonight",
+  "A": "... Every evening the old woman fed the pigeons in the square. Tonight, she baked a special cake with fresh bread and honey. The sun was warm and the sky blue, painting the sky with hues of pink and orange. The old",
+  "B": "...and tonight the old woman fed the pigeons in the square. The pigeons chirped excitedly as they plopped down onto her table, their tiny wings catching the light and sparkling like diamonds. She watched them, grateful for"
+ },
+ {
+  "id": "p122",
+  "question": "Which text contains more spoken dialogue?",
+  "opening": "It was the last day of the school year, and the teacher asked everyone to",
+  "A": "repeat the school year. The classroom was empty, save for the teacher standing in the center, holding a large calendar on a large white board. The students sat around the classroom, looking out the window, which was filled with empty spaces.",
+  "B": "write a final note. The note was a heartfelt expression of gratitude and wishful thinking, a kind of farewell that encapsulated the school year's journey, its ups and downs, and the hopes and dreams that had been shared. The teacher"
+ },
+ {
+  "id": "p123",
+  "question": "Which text is more formal?",
+  "opening": "The museum closed at five, but the guard on the upper floor noticed",
+  "A": "The guard on the upper floor noticed an unusual pattern in the visitors' behavior. The crowd, now thronging the museum, seemed to be drawn to the central exhibit, the ancient ruins, not by the size or complexity of the exhibits",
+  "B": "the slight movement in the crowd. The guard, a young man with a curious look in his eyes, approached the counter and started counting the tickets. He noticed that the crowd seemed to be getting restless, some looking at the paintings in anticipation"
+ },
+ {
+  "id": "p124",
+  "question": "Which text is more formal?",
+  "opening": "After the flood, the family returned to the farm, and the first thing",
+  "A": "After the flood, the family returned to the farm, and the first thing they noticed was the towering trees that had grown from the debris of the ruined homes. The water had made the ground swell, and the land was covered in a thick",
+  "B": "the family returned to the farm, and the first thing the new additions did was to plant a few new vegetables and flowers. They spent hours tending to the garden, watering the plants and pulling weeds to make space for their first new addition"
+ },
+ {
+  "id": "p125",
+  "question": "Which text is more formal?",
+  "opening": "The climbers reached the hut at four in the afternoon. Inside, they found",
+  "A": "A cozy hut with a warm fire burning, where the sun was setting. The wind whispered secrets in the trees, and the fresh earth smelled like blooming flowers. The sun-kissed skin felt so warm and inviting, and the clearing",
+  "B": "a serene and peaceful atmosphere, the presence of nature that had been so apparent from the vantage points overlooking the dense undergrowth. The sun had set, painting the sky with hues of orange and pink, casting a golden glow upon the clearing"
+ },
+ {
+  "id": "p126",
+  "question": "Which text is more tense?",
+  "opening": "Kofi drove the night bus on the coast road. At the third stop,",
+  "A": "Kofi drove the night bus on the coast road. At the third stop, he paused to watch the sunset dance on the tranquil waters of the bay. The air was filled with the soft rustling of seagulls, and the bell",
+  "B": "Kofi drove the night bus on the coast road. At the third stop, the car stopped, and the driver noticed the passengers. The passengers were a group of friends, all wearing casual clothes, and they were talking animatedly. The"
+ },
+ {
+  "id": "p127",
+  "question": "Which text is more hopeful?",
+  "opening": "Mara had locked the kitchen an hour ago. Now she stood in the hallway and",
+  "A": "she stood in the hallway and looked around helplessly. Each door and window had their locks relocked, except for the one leading to the bathroom. She couldn't move the door, but she couldn't escape either. She screamed in agony",
+  "B": "she reflected on her decision. She had been feeling anxious for a while now, the tension between her and her partner, as she adjusted her expression of concern. She knew she couldn't stay locked out for too long, but the thought of"
+ },
+ {
+  "id": "p128",
+  "question": "Which text is more tense?",
+  "opening": "The orchestra was tuning when the conductor walked to the front and",
+  "A": "...the sound of music returned. The air was filled with the symphony of voices, each instrument harmonizing with the others, creating a beautiful melody that enveloped the room. The conductor stood before the audience, his eyes fixed on the",
+  "B": "...the conductor smiled, his voice deep and steady, as he stepped forward to greet everyone. The orchestra members had been discussing their upcoming performance and the conductor had decided to take a moment to rest before continuing. He had been practicing for days"
+ }
+]

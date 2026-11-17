@@ -182,7 +182,7 @@ function setDose(name, dose, quiet) {
   note.textContent = !axis.steering ? "Not measured yet."
     : axis.measurable === false ? "The check of this axis's judge failed, so its effect is not measured."
     : outside ? "Past the measured fluent range: expect broken or repeating text."
-    : dose === 0 ? "" : "Inside the measured fluent range."
+    : dose === 0 ? "" : measuredNote(name, axis, dose)
   const marker = card.querySelector("[data-marker]")
   if (marker) {
     const position = Number(marker.dataset.left) + ((dose + limit) / (2 * limit)) * Number(marker.dataset.span)
@@ -193,10 +193,35 @@ function setDose(name, dose, quiet) {
   if (!quiet && state.running && !state.running.locked) post("/api/knobs", { knobs: state.knobs })
 }
 
+function measuredNote(name, axis, dose) {
+  const rows = ((state.info.paired || {})[name] || []).filter((row) => row.dose * dose > 0)
+  if (!rows.length) return "Inside the measured fluent range."
+  const row = rows.reduce((best, next) => (Math.abs(next.dose - dose) < Math.abs(best.dose - dose) ? next : best))
+  const signed = (value) => (value >= 0 ? "+" : "") + value.toFixed(2)
+  const numbers = `change ${signed(row.change)}, 95% interval ${signed(row.interval[0])} to ${signed(row.interval[1])}`
+  const scale = axis.metric === "quoted_share" ? "share of text in quotes" : "judge scale from 0 to 1"
+  return row.clear
+    ? `Measured at dose ${signed(row.dose)}: ${numbers} (${scale}).`
+    : `Measured at dose ${signed(row.dose)}: no clear effect (${numbers}).`
+}
 function showCombination() {
-  const on = Object.values(state.knobs).filter((dose) => dose !== 0).length
-  $("combo").className = "note" + (on > 1 ? " warn" : "")
-  $("combo").textContent = on > 1 ? `${on} knobs are on. Each knob was measured alone; what they do together was not measured.` : ""
+  const on = Object.keys(state.knobs).filter((name) => state.knobs[name] !== 0)
+  const measured = (state.info && state.info.pairs && state.info.pairs.pairs) || []
+  const pair = on.length === 2 && measured.find((entry) => on.every((name) => entry.knobs.includes(name)))
+  let text = ""
+  let warn = on.length > 1
+  if (pair) {
+    const corner = pair.corners.find((entry) => on.every((name) => entry.doses[name] * state.knobs[name] > 0))
+    const works = pair.effects.map((row) => `${row.knob} ${row.still_works ? "still works" : "has no clear effect"}`).join(", ")
+    warn = !corner.fluent || pair.effects.some((row) => !row.still_works)
+    text = `${on.join(" + ")} were measured together at the ends of their fluent ranges. At this corner the text ${corner.fluent ? "stayed fluent" : "did not stay fluent"} (perplexity ${corner.perplexity_ratio.toFixed(2)}x of dose 0). Next to each other: ${works}.`
+  } else if (on.length > 1) {
+    text = measured.length
+      ? `${on.length} knobs are on. Knobs were measured alone and in pairs; three or more together were not measured.`
+      : `${on.length} knobs are on. Each knob was measured alone; what they do together was not measured.`
+  }
+  $("combo").className = "note" + (warn ? " warn" : "")
+  $("combo").textContent = text
 }
 
 function post(path, body, signal) {

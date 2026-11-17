@@ -107,11 +107,12 @@ def command_say(args) -> None:
 
 
 def command_serve(args) -> None:
+    from . import calibration
     from .server import App, serve
 
     engine, name = open_engine(args)
-    _folder, summary, axes = open_calibration(name, args)
-    server = serve(App(engine, axes, summary), args.port)
+    folder, summary, axes = open_calibration(name, args)
+    server = serve(App(engine, axes, summary, calibration.load_extras(folder)), args.port)
     url = f"http://127.0.0.1:{args.port}/"
     print(f"Kemudi {__version__} with {name}: {url}  (Ctrl+C to stop)")
     if args.open:

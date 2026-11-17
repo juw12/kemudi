@@ -131,3 +131,9 @@ def test_locked_run_ignores_live_knobs_and_stop_ends_it(running):
     assert lines[-1]["done"] is True and lines[-1]["tokens"] < 50
     assert app.locked is False
     assert json.loads(call(port, "POST", "/api/knobs", {"knobs": {"mood": 0.3}})[1]) == {"applied": True}
+
+
+def test_info_carries_the_follow_up_measurements_when_they_exist():
+    app = App(FakeEngine(), {"mood": object()}, {"model": "fake", "axes": {}}, {"paired": {"mood": []}})
+    assert app.info() == {"summary": {"model": "fake", "axes": {}}, "paired": {"mood": []}}
+    assert App(FakeEngine(), {}, {"axes": {}}).info() == {"summary": {"axes": {}}}

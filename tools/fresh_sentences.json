@@ -1,0 +1,599 @@
+{
+ "about": "Labelled sentences written after the judge was fixed, by three hosted language models other than the one being steered (writer 1 to 3; 8 sentences per pole per axis each). Every sentence received is kept. Used only by tools/judge_fresh.py.",
+ "axes": {
+  "mood": {
+   "low": [
+    {
+     "writer": 1,
+     "text": "The silence in the empty house grew heavier each day, pressing against the windows like a storm that never broke."
+    },
+    {
+     "writer": 1,
+     "text": "He watched the train doors close, separating him from the only person who ever truly understood his quiet, trembling heart."
+    },
+    {
+     "writer": 1,
+     "text": "The cold seeped through his thin coat, reminding him that winter would not end until nothing remained of him."
+    },
+    {
+     "writer": 1,
+     "text": "She blew out the single candle alone, knowing nobody would call to ask how her day had gone."
+    },
+    {
+     "writer": 1,
+     "text": "The vase lay in shards on the floor, much like the promises they made to each other last year."
+    },
+    {
+     "writer": 1,
+     "text": "He carried the cardboard box to his car, feeling the weight of every failure inside it pressing down."
+    },
+    {
+     "writer": 1,
+     "text": "The machine beeped steadily, marking time while everyone else in the room stopped breathing altogether."
+    },
+    {
+     "writer": 1,
+     "text": "The sky remained gray for weeks, hiding the sun until everyone forgot what warmth actually felt like."
+    },
+    {
+     "writer": 2,
+     "text": "The empty chair at the table remained untouched, and no one spoke of her name anymore."
+    },
+    {
+     "writer": 2,
+     "text": "Rain leaked through the cracked ceiling, pooling on the floor where the family photos once hung."
+    },
+    {
+     "writer": 2,
+     "text": "He walked past the hospital window, knowing she would not recognize him when he entered."
+    },
+    {
+     "writer": 2,
+     "text": "The eviction notice fluttered in the wind, pinned to a door that no longer locked."
+    },
+    {
+     "writer": 2,
+     "text": "She counted the pills in the bottle, wondering if there would be enough for the week."
+    },
+    {
+     "writer": 2,
+     "text": "The factory whistle blew for the last time, and the workers walked home in silence."
+    },
+    {
+     "writer": 2,
+     "text": "His letters came back unopened, marked with a return address he did not recognize."
+    },
+    {
+     "writer": 2,
+     "text": "The garden had withered to dust, and she could not remember why she had planted it."
+    },
+    {
+     "writer": 3,
+     "text": "The doctor's words dissolved into static. In the corridor, Maria counted the tiles between her and the door, wondering which one she'd collapse behind."
+    },
+    {
+     "writer": 3,
+     "text": "The mill's last shift ended in March. Now rusted gates keep nothing out, and the diner's coffee pot has been empty since summer."
+    },
+    {
+     "writer": 3,
+     "text": "Every evening, Harold sets two plates out of habit. By eight o'clock, he wraps one meal in foil and eats standing at the window."
+    },
+    {
+     "writer": 3,
+     "text": "The river took the barn, the tractor, and forty years of photographs. Dana stood in the mud, holding a single frame with no picture left."
+    },
+    {
+     "writer": 3,
+     "text": "The security guard walked Sam to the parking lot with his box of desk things. His badge stopped working before he reached the gate."
+    },
+    {
+     "writer": 3,
+     "text": "The letter came back stamped undeliverable. Yusuf read his own handwriting anyway, then folded it into the pocket where her address used to be."
+    },
+    {
+     "writer": 3,
+     "text": "The playground swings hung still and chained. A single red balloon, deflated for weeks, kept its vigil beneath the slide no child would climb again."
+    },
+    {
+     "writer": 3,
+     "text": "His mother looked up from the jigsaw and asked, politely, who he was. For the third time that week, Daniel introduced himself and sat down anyway."
+    }
+   ],
+   "high": [
+    {
+     "writer": 1,
+     "text": "The sun broke through the clouds, painting the wet pavement with gold and promising a fresh start."
+    },
+    {
+     "writer": 1,
+     "text": "A tiny green shoot pushed through the cracked concrete, proving life finds a way even in the hardest places."
+    },
+    {
+     "writer": 1,
+     "text": "They ran toward each other across the platform, embracing tightly as if never letting go again."
+    },
+    {
+     "writer": 1,
+     "text": "She opened the envelope with shaking hands, smiling when the acceptance letter slipped out onto the table."
+    },
+    {
+     "writer": 1,
+     "text": "He handed her the warm mug, their fingers brushing slightly as they shared a quiet, understanding smile."
+    },
+    {
+     "writer": 1,
+     "text": "Today he walked without the cane, feeling the strong ground beneath his feet supporting every steady step."
+    },
+    {
+     "writer": 1,
+     "text": "The child's laughter echoed through the park, chasing away the shadows that had lingered there all morning."
+    },
+    {
+     "writer": 1,
+     "text": "She planted the seed in the dark soil, trusting that spring would eventually bring it into the light."
+    },
+    {
+     "writer": 2,
+     "text": "The first snow fell softly, and the children laughed as they caught flakes on their tongues."
+    },
+    {
+     "writer": 2,
+     "text": "She opened the letter and smiled, knowing her daughter would be home by spring."
+    },
+    {
+     "writer": 2,
+     "text": "The seedling pushed through the frozen soil, reaching toward the pale morning sun."
+    },
+    {
+     "writer": 2,
+     "text": "He held her hand in the delivery room, and a new cry filled the quiet house."
+    },
+    {
+     "writer": 2,
+     "text": "The old man planted tomatoes in the empty yard, certain they would grow tall by summer."
+    },
+    {
+     "writer": 2,
+     "text": "After years apart, they met at the train station and did not let go."
+    },
+    {
+     "writer": 2,
+     "text": "The library reopened its doors, and children rushed inside to borrow books about dragons."
+    },
+    {
+     "writer": 2,
+     "text": "She finished the painting at dawn, finally seeing the face she had been searching for."
+    },
+    {
+     "writer": 3,
+     "text": "The first green shoots pushed through the ash-covered soil. Kneeling in the ruins of last year's fire, Amara planted tomatoes anyway, and smiled."
+    },
+    {
+     "writer": 3,
+     "text": "When Priya's name echoed across the auditorium, her grandmother stood first, clapping with both hands. The whole row of cousins rose with her."
+    },
+    {
+     "writer": 3,
+     "text": "One year sober today. Marcus pinned the bronze chip to his jacket, called his sponsor, and walked to work whistling a tune he half remembered."
+    },
+    {
+     "writer": 3,
+     "text": "The phone rang at midnight: someone had found Biscuit, muddy but alive, three towns over. Elena laughed until she cried, then drove straight through the rain."
+    },
+    {
+     "writer": 3,
+     "text": "Neighbors who had never spoken shared hammers and thermoses on Mrs. Okafor's roof. By Sunday, every tarp in the neighborhood had become a proper shingle."
+    },
+    {
+     "writer": 3,
+     "text": "The incubator's alarm stayed quiet all night. At dawn, little Rosa gripped her father's finger with surprising strength, and he whispered, 'You're staying.'"
+    },
+    {
+     "writer": 3,
+     "text": "The envelope was thin, but the word inside was yes. Theo read it four times on the porch steps, then ran inside shouting for his mother."
+    },
+    {
+     "writer": 3,
+     "text": "After ten years of silence, the knock came at Lena's door. Her brother stood there holding bread from their mother's recipe, and she stepped aside to let him in."
+    }
+   ]
+  },
+  "tension": {
+   "low": [
+    {
+     "writer": 1,
+     "text": "The steam rose gently from the mug as sunlight warmed the wooden table. She took a slow sip and watched the birds outside."
+    },
+    {
+     "writer": 1,
+     "text": "He turned the page quietly, lost in the story while rain tapped softly against the windowpane. The room smelled of old paper."
+    },
+    {
+     "writer": 1,
+     "text": "Leaves crunched under her boots as she walked the familiar path. The air was cool and smelled of pine needles."
+    },
+    {
+     "writer": 1,
+     "text": "The bobber floated still on the glassy lake surface. He waited patiently for a ripple that never came."
+    },
+    {
+     "writer": 1,
+     "text": "The infant breathed deeply in the crib, tiny fingers curled around the blanket. Mother smiled softly in the dim light."
+    },
+    {
+     "writer": 1,
+     "text": "Brushstrokes blended seamlessly on the canvas as music played low in the background. She stepped back to admire the colors."
+    },
+    {
+     "writer": 1,
+     "text": "Warm wind moved through the open window, carrying the scent of blooming jasmine. He closed his eyes and listened."
+    },
+    {
+     "writer": 1,
+     "text": "The orange cat stretched across the sunny rug, purring loudly enough to vibrate the floor. Nothing else mattered in this moment."
+    },
+    {
+     "writer": 2,
+     "text": "She sat by the window, watching the rain trace slow paths down the glass while the cat purred softly on her lap."
+    },
+    {
+     "writer": 2,
+     "text": "Grandmother rocked gently in her chair, the knitting needles clicking in a steady rhythm as the afternoon light warmed the porch."
+    },
+    {
+     "writer": 2,
+     "text": "The child ran through the meadow, laughing as dandelion seeds scattered into the breeze like tiny white parachutes."
+    },
+    {
+     "writer": 2,
+     "text": "He turned the pages of his book slowly, the fire crackling low in the hearth and the dog sleeping at his feet."
+    },
+    {
+     "writer": 2,
+     "text": "They walked along the shoreline, their bare feet leaving prints in the wet sand as the sun melted into the horizon."
+    },
+    {
+     "writer": 2,
+     "text": "The baker arranged the morning loaves in the window, brushing flour from his apron as the street slowly woke outside."
+    },
+    {
+     "writer": 2,
+     "text": "The old fisherman sat on the dock, his line still in the water, watching the mist rise from the lake."
+    },
+    {
+     "writer": 2,
+     "text": "She shelved the last book of the morning, pausing to admire the dust motes drifting through the library's tall windows."
+    },
+    {
+     "writer": 3,
+     "text": "She sipped her coffee on the porch while the morning light spread slowly across the garden."
+    },
+    {
+     "writer": 3,
+     "text": "I turned the pages of my book as rain tapped gently against the window all afternoon."
+    },
+    {
+     "writer": 3,
+     "text": "The old dog stretched out on the warm stones, sighing once before drifting back to sleep."
+    },
+    {
+     "writer": 3,
+     "text": "He rowed the little boat toward the middle of the lake, where the water lay smooth and still."
+    },
+    {
+     "writer": 3,
+     "text": "Grandmother's needles clicked softly as she finished the last row, the fire settling into a steady glow."
+    },
+    {
+     "writer": 3,
+     "text": "I walked the shoreline at dusk, collecting smooth shells while the waves kept their unhurried rhythm."
+    },
+    {
+     "writer": 3,
+     "text": "The bakery smelled of warm bread, and the baker hummed an old tune while kneading the morning dough."
+    },
+    {
+     "writer": 3,
+     "text": "She trimmed the roses in the quiet garden, pausing now and then to watch the bees drift by."
+    }
+   ],
+   "high": [
+    {
+     "writer": 1,
+     "text": "He held his breath behind the door, hearing footsteps stop just outside. The handle began to turn slowly."
+    },
+    {
+     "writer": 1,
+     "text": "The phone remained silent on the table while she paced the kitchen floor. Every second felt like an hour passing."
+    },
+    {
+     "writer": 1,
+     "text": "Tires screeched against the wet asphalt as the truck swerved toward them. She gripped the dashboard until her knuckles turned white."
+    },
+    {
+     "writer": 1,
+     "text": "His hand shook as he opened the envelope containing the final results. The room seemed to spin around him suddenly."
+    },
+    {
+     "writer": 1,
+     "text": "She glanced over her shoulder again, seeing the same shadow following her down the street. Her heart hammered against her ribs."
+    },
+    {
+     "writer": 1,
+     "text": "Silence filled the car while he stared straight ahead at the road. She knew exactly what he was going to say."
+    },
+    {
+     "writer": 1,
+     "text": "The sun dipped below the trees, leaving only cold shadows around her. She called out but no one answered."
+    },
+    {
+     "writer": 1,
+     "text": "The red digits counted down from ten while sweat dripped into his eyes. He hesitated between the blue and yellow wires."
+    },
+    {
+     "writer": 2,
+     "text": "She froze on the sidewalk, her breath catching as the footsteps behind her grew faster and closer."
+    },
+    {
+     "writer": 2,
+     "text": "The mother scanned every face in the crowded mall, her heart pounding as the minutes slipped away without her daughter."
+    },
+    {
+     "writer": 2,
+     "text": "He pressed the brake again and again, the pedal sinking uselessly as the mountain curve rushed toward him."
+    },
+    {
+     "writer": 2,
+     "text": "The soldier checked his watch, then the tree line, then his watch again, waiting for the signal that never came."
+    },
+    {
+     "writer": 2,
+     "text": "The detective crouched by the overturned chair, his flashlight catching a glint of metal beneath the victim's desk."
+    },
+    {
+     "writer": 2,
+     "text": "She checked the map once more, then again, the trees pressing closer as the last light drained from the sky."
+    },
+    {
+     "writer": 2,
+     "text": "He sat in the waiting room, his knee bouncing, watching the nurse's expression for any hint of the results."
+    },
+    {
+     "writer": 2,
+     "text": "Through the peephole, she watched the figure shift its weight, then reach slowly toward the doorknob."
+    },
+    {
+     "writer": 3,
+     "text": "The phone rang at midnight. My hands shook as I reached for it, knowing no one calls with good news that late."
+    },
+    {
+     "writer": 3,
+     "text": "He heard the floorboard creak upstairs again, closer this time, and pressed himself deeper into the closet's darkness."
+    },
+    {
+     "writer": 3,
+     "text": "The storm tore at the sails while the crew fought to keep the ship from turning broadside to the waves."
+    },
+    {
+     "writer": 3,
+     "text": "Her heart pounded as the examiner's footsteps approached her table, and she still hadn't answered the final question."
+    },
+    {
+     "writer": 3,
+     "text": "I checked the mirror again. The same headlights had followed me for ten miles, holding steady no matter how I turned."
+    },
+    {
+     "writer": 3,
+     "text": "The rope frayed a little more with each passing minute, and below him the river churned over the rocks."
+    },
+    {
+     "writer": 3,
+     "text": "The monitor flatlined once, then stuttered. The surgeon's voice cut through the room: \"Pressure's dropping—move, now.\""
+    },
+    {
+     "writer": 3,
+     "text": "She dialed 911 with a trembling thumb, whispering her address while the argument outside her door grew louder."
+    }
+   ]
+  },
+  "register": {
+   "low": [
+    {
+     "writer": 1,
+     "text": "I spilled my latte all over the table, and now everyone is staring at me like I'm some kind of clumsy idiot."
+    },
+    {
+     "writer": 1,
+     "text": "The bus driver totally ignored me even though I was waving like a maniac down at the corner stop."
+    },
+    {
+     "writer": 1,
+     "text": "Hey, wanna grab pizza later? I'm starving and don't feel like cooking anything decent tonight anyway."
+    },
+    {
+     "writer": 1,
+     "text": "She dug through her bag for ages but couldn't find the keys anywhere near her phone."
+    },
+    {
+     "writer": 1,
+     "text": "We binge-watched the whole season in one night because the cliffhanger was just too crazy to ignore."
+    },
+    {
+     "writer": 1,
+     "text": "My dog pulled hard on the leash when he saw another pup running loose in the park."
+    },
+    {
+     "writer": 1,
+     "text": "He sprinted down the street hoping the boss wouldn't notice he was twenty minutes late again."
+    },
+    {
+     "writer": 1,
+     "text": "These jeans fit perfectly, so I'm gonna buy them even though they are kinda pricey right now."
+    },
+    {
+     "writer": 2,
+     "text": "I grabbed a coffee and headed to the park, watching the dogs chase each other around the fountain."
+    },
+    {
+     "writer": 2,
+     "text": "She kicked off her shoes and flopped onto the couch, scrolling through her phone for an hour."
+    },
+    {
+     "writer": 2,
+     "text": "We ordered pizza and argued about which topping was the worst, laughing the whole time."
+    },
+    {
+     "writer": 2,
+     "text": "He tripped over the garden hose and landed face-first in the flower bed, soaking wet."
+    },
+    {
+     "writer": 2,
+     "text": "I forgot my umbrella again and sprinted through the rain like a soaked cat."
+    },
+    {
+     "writer": 2,
+     "text": "They stayed up way too late watching bad movies and eating microwave popcorn."
+    },
+    {
+     "writer": 2,
+     "text": "My neighbor's dog escaped again and showed up at my door with a guilty look."
+    },
+    {
+     "writer": 2,
+     "text": "She burned the toast, swore at the smoke alarm, and gave up on breakfast entirely."
+    },
+    {
+     "writer": 3,
+     "text": "I grabbed my keys, yelled at the cat to move, and bolted out the door. Traffic was already a nightmare."
+    },
+    {
+     "writer": 3,
+     "text": "Sam burned the toast again, shrugged, and ate it anyway. His roommate just laughed from the couch."
+    },
+    {
+     "writer": 3,
+     "text": "We ditched the movie halfway through and got tacos instead. Honestly, best decision we made all week."
+    },
+    {
+     "writer": 3,
+     "text": "My phone died right before the concert, so I spent the whole night trying to find my friends in the crowd."
+    },
+    {
+     "writer": 3,
+     "text": "The dog stole a sock and ran laps around the kitchen. Nobody even bothered chasing him anymore."
+    },
+    {
+     "writer": 3,
+     "text": "Mia texted 'omw' from the parking lot, then sat there for ten minutes finishing her podcast. Classic Mia."
+    },
+    {
+     "writer": 3,
+     "text": "Grandpa told the same fishing story at dinner, and we all let him. Some things you just don't correct."
+    },
+    {
+     "writer": 3,
+     "text": "I spilled coffee on my shirt five minutes before the meeting. Great start to a Monday, honestly."
+    }
+   ],
+   "high": [
+    {
+     "writer": 1,
+     "text": "The committee shall convene at noon to discuss the proposed amendments regarding quarterly financial expenditures."
+    },
+    {
+     "writer": 1,
+     "text": "Please be advised that failure to comply with these regulations may result in immediate termination of services."
+    },
+    {
+     "writer": 1,
+     "text": "The professor instructed the students to submit their thesis papers before the designated deadline on Friday."
+    },
+    {
+     "writer": 1,
+     "text": "We regret to inform you that your application has been denied due to insufficient documentation provided."
+    },
+    {
+     "writer": 1,
+     "text": "The ambassador approached the podium to deliver his address concerning the ongoing diplomatic relations between nations."
+    },
+    {
+     "writer": 1,
+     "text": "The patient exhibited symptoms consistent with the initial diagnosis presented during the previous clinical examination yesterday."
+    },
+    {
+     "writer": 1,
+     "text": "The judge ordered the witness to remain silent until called upon to testify under strict oath."
+    },
+    {
+     "writer": 1,
+     "text": "Management requests that all personnel adhere strictly to the updated safety protocols effective immediately throughout the facility."
+    },
+    {
+     "writer": 2,
+     "text": "The elderly gentleman perused the morning newspaper with measured deliberation, occasionally adjusting his spectacles."
+    },
+    {
+     "writer": 2,
+     "text": "She departed the office at precisely six o'clock, her footsteps echoing through the vacant corridor."
+    },
+    {
+     "writer": 2,
+     "text": "The rain descended upon the cobblestones, transforming the quiet street into a glistening tapestry."
+    },
+    {
+     "writer": 2,
+     "text": "He contemplated the letter for several minutes before folding it carefully and placing it within the drawer."
+    },
+    {
+     "writer": 2,
+     "text": "The aroma of freshly brewed coffee permeated the kitchen as dawn broke beyond the window."
+    },
+    {
+     "writer": 2,
+     "text": "She observed the children playing in the garden, a faint smile gracing her weathered features."
+    },
+    {
+     "writer": 2,
+     "text": "The conductor raised his baton, and the orchestra commenced its rendition of the symphony."
+    },
+    {
+     "writer": 2,
+     "text": "I traversed the moonlit pathway, contemplating the events that had transpired earlier that evening."
+    },
+    {
+     "writer": 3,
+     "text": "Upon arriving at the residence, the inspector discovered that the front door had been left unlocked throughout the night."
+    },
+    {
+     "writer": 3,
+     "text": "Eleanor considered the matter carefully before responding; she wished to ensure that her remarks would not be misunderstood."
+    },
+    {
+     "writer": 3,
+     "text": "The committee has determined that the proposal shall be reviewed at the next scheduled meeting in October."
+    },
+    {
+     "writer": 3,
+     "text": "Having completed his correspondence, Mr. Whitfield proceeded to the library, where he intended to read until supper was announced."
+    },
+    {
+     "writer": 3,
+     "text": "It was concluded that the delay in shipment resulted from an administrative error for which the supplier accepted responsibility."
+    },
+    {
+     "writer": 3,
+     "text": "The professor requested that all examinations be submitted before noon, as no exceptions would be granted under any circumstances."
+    },
+    {
+     "writer": 3,
+     "text": "She expressed her gratitude to the hosts, whose hospitality had far exceeded anything she might reasonably have anticipated."
+    },
+    {
+     "writer": 3,
+     "text": "Following considerable deliberation, the family resolved to sell the estate, though the decision was reached with evident reluctance."
+    }
+   ]
+  }
+ }
+}

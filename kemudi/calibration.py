@@ -51,3 +51,12 @@ def load(folder: Path) -> tuple[dict, dict[str, Axis]]:
         for name, entry in summary["axes"].items()
     }
     return summary, axes
+
+
+def load_extras(folder: Path) -> dict:
+    """Follow-up measurements the app shows when they are there: paired.json and pairs.json."""
+    return {
+        name: json.loads((folder / f"{name}.json").read_text(encoding="utf-8"))
+        for name in ("paired", "pairs")
+        if (folder / f"{name}.json").is_file()
+    }

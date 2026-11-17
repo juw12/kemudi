@@ -18,10 +18,11 @@ MAX_STORY_CHARACTERS = 4000
 
 
 class App:
-    def __init__(self, engine: Engine, axes: dict[str, Axis], summary: dict):
+    def __init__(self, engine: Engine, axes: dict[str, Axis], summary: dict, extras: dict | None = None):
         self.engine = engine
         self.axes = axes
         self.summary = summary
+        self.extras = extras or {}
         self.stop = threading.Event()
         self.locked = False
         engine.set_gauges(axes)
@@ -34,7 +35,7 @@ class App:
         }
 
     def info(self) -> dict:
-        return {"summary": self.summary}
+        return {"summary": self.summary, **self.extras}
 
     def set_live_knobs(self, raw: dict) -> bool:
         """Change the knobs of the running generation. Refused while a locked comparison run is writing."""

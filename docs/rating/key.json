@@ -1,0 +1,642 @@
+{
+ "p001": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "A"
+ },
+ "p002": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p003": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p004": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p005": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p006": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p007": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p008": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p009": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p010": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p011": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p012": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "A"
+ },
+ "p013": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p014": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p015": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p016": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p017": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "A"
+ },
+ "p018": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p019": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p020": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p021": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p022": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p023": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p024": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p025": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p026": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p027": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p028": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p029": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p030": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p031": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p032": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p033": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "B"
+ },
+ "p034": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p035": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p036": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p037": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "B"
+ },
+ "p038": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p039": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p040": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p041": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p042": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p043": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "B"
+ },
+ "p044": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p045": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p046": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p047": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p048": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "A"
+ },
+ "p049": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p050": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p051": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p052": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p053": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p054": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "B"
+ },
+ "p055": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p056": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p057": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p058": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p059": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p060": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p061": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p062": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p063": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p064": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p065": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "A"
+ },
+ "p066": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p067": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p068": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p069": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p070": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p071": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p072": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p073": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p074": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p075": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p076": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "B"
+ },
+ "p077": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p078": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p079": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p080": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p081": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "B"
+ },
+ "p082": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p083": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p084": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p085": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p086": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p087": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p088": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p089": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p090": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p091": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p092": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p093": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p094": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p095": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p096": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p097": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p098": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "A"
+ },
+ "p099": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p100": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "B"
+ },
+ "p101": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "B"
+ },
+ "p102": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p103": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p104": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p105": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p106": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "A"
+ },
+ "p107": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p108": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "B"
+ },
+ "p109": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p110": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p111": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "A"
+ },
+ "p112": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "B"
+ },
+ "p113": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p114": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p115": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "B"
+ },
+ "p116": {
+  "axis": "mood",
+  "dose": 0.45,
+  "intended": "B"
+ },
+ "p117": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p118": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "A"
+ },
+ "p119": {
+  "axis": "tension",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p120": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "B"
+ },
+ "p121": {
+  "axis": "speech",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p122": {
+  "axis": "speech",
+  "dose": -0.45,
+  "intended": "B"
+ },
+ "p123": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p124": {
+  "axis": "register",
+  "dose": -0.15,
+  "intended": "A"
+ },
+ "p125": {
+  "axis": "register",
+  "dose": 0.15,
+  "intended": "B"
+ },
+ "p126": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p127": {
+  "axis": "mood",
+  "dose": -0.3,
+  "intended": "B"
+ },
+ "p128": {
+  "axis": "tension",
+  "dose": -0.3,
+  "intended": "B"
+ }
+}

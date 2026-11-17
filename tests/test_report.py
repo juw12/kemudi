@@ -134,6 +134,8 @@ def test_readme_numbers_and_samples_are_the_measured_ones():
         assert block(readme, "paired") == (ROOT / "docs" / "paired_table.md").read_text(encoding="utf-8").strip()
         assert block(readme, "samples") == sample_block(summary, samples)
         assert block(readme, "echoes") == echo_table(summary, samples)
+    for name in ("judge_fresh", "rating", "pairs", "reproduce"):
+        assert block(readme, name) == (ROOT / "docs" / f"{name}_table.md").read_text(encoding="utf-8").strip()
 
 
 def test_echo_table_counts_texts_that_hand_the_control_back():

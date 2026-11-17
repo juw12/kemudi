@@ -79,13 +79,13 @@ def compare_numbers(shipped: dict, fresh: dict) -> list[str]:
 def report(fresh_folder: Path) -> str:
     load = lambda folder, name: json.loads((folder / name).read_text(encoding="utf-8"))
     parts = [
-        "### Vectors",
+        "#### Vectors",
         *compare_vectors(np.load(SHIPPED / "vectors.npz"), np.load(fresh_folder / "vectors.npz")),
         "",
-        "### Generated texts",
+        "#### Generated texts",
         *compare_texts(load(SHIPPED, "samples.json"), load(fresh_folder, "samples.json")),
         "",
-        "### Published numbers",
+        "#### Published numbers",
         *compare_numbers(load(SHIPPED, "calibration.json"), load(fresh_folder, "calibration.json")),
     ]
     return "\n".join(parts)

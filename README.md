@@ -12,10 +12,16 @@ of what it does to the text and the dose at which the text breaks.
 
 - **Four knobs** for a story the model is writing: `mood` (bleak to hopeful), `tension` (calm to
   tense), `register` (casual to formal) and `speech` (narration to dialogue).
+- **What the measurement found**: mood works, tension and register work in a narrow range, and
+  speech shows no clear effect inside its green band. The tension judge failed one later check.
+  The tables below show all of it.
 - **They act while the model writes.** Move a slider and the next words change. Nothing is added
   to the prompt and nothing is regenerated.
 - **A green band on every slider**: the doses that were measured to keep the text fluent. Past
   the band the app warns you before you get there.
+- **A measured note under every slider**: the change at the nearest measured dose with its 95%
+  interval, or "no clear effect" where there was none. With two knobs on, the app says what was
+  measured for that pair.
 - **A gauge per knob** that reads the model's own state along that direction, word by word.
 - **"Compare with zero"**: the same opening and the same random seed, written with and without
   your knobs, side by side.
@@ -24,12 +30,11 @@ of what it does to the text and the dose at which the text breaks.
 
 ## Start it
 
-On Windows, double-click `Start Kemudi.cmd`. On macOS or Linux, run `./start-kemudi.sh`. The
-first start installs Python packages and downloads the model once (about 1.3 GB together), then
-opens the app in your browser. The Windows script was run from a fresh clone on
-Windows 10 with the model already on disk. The shell script is run by CI on Linux and on macOS
-at every push: a fresh machine installs, downloads the model, the app answers and a steered
-sentence is written.
+On Windows, double-click `Start Kemudi.cmd`. On macOS or Linux, run `./start-kemudi.sh`. Both
+need Python 3.10 or newer on the machine. The first start installs Python packages and
+downloads the model once (about 1.3 GB together), then opens the app in your browser. CI runs
+both scripts at every push, on Windows, Linux and macOS: a fresh machine installs, downloads
+the model, the app answers and a steered sentence is written.
 
 By hand, on any system with Python 3.10 or newer:
 
@@ -63,6 +68,16 @@ adds a vector 30% as long as that state.
 | register (casual to formal) | 14 | 1.00 | 1.000 | -0.15 to +0.15 | 0.51 | 0.48 to 0.54 | 0.52 to 0.51 | none | 0.475 |
 | speech (narration to dialogue) | 14 | 1.00 | counted | -0.45 to +0.15 | 0.00 | 0.00 to 0.04 | 0.05 to 0.00 | none | 0.279 |
 <!-- results:end -->
+
+Two rows need a warning before they are read, both from checks made after this table (see
+"Checks added after the first release"):
+
+- **tension**: its judge passed the check in this table and then failed on fresh sentences
+  (0.863 against the 0.90 limit). By this project's own rule the tension effect is
+  not validated by that judge. Blind raters, who do not use the judge, picked the intended text
+  at both ends.
+- **speech**: no clear effect inside its usable range, in the paired check and in the blind
+  rating. The app says so under the slider.
 
 How to read it:
 
@@ -195,6 +210,10 @@ Speech shows no change inside its usable range: nothing at -0.45, and at +0.15 o
 openings gain dialogue and the interval starts at zero. These are eight comparisons, with no
 correction for making eight of them.
 
+`paired.json` holds the same check at all eight non-zero doses, and the app shows it under
+each slider. Mood, tension and register have a clear effect at every one of them. Speech has
+none at any dose inside its usable range; its first clear dose is +0.30, which is past the band.
+
 ### The same opening at three doses
 
 One evaluation opening, the first in the list, continued with the same seed at dose 0 and at
@@ -227,6 +246,179 @@ in `samples.json`, and the first one at every dose is in [docs/samples.md](docs/
 - `+0.15` she reflected on her decision. Had she been too hard on herself? Had she overreacted? She couldn't remember. She'd been such an idiot, she thought. Her heart pounded in her chest, and she felt like she'd
 <!-- samples:end -->
 
+## Checks added after the first release
+
+Four checks were added after the first release. For each one the pass rule was written into the
+tool before it ran, and the result is shown here whether it passed or not. None of them changed
+a number in the tables above.
+
+### The judge on sentences it had never seen
+
+The judge's zero point and unit were set on half of the labelled sentences in
+`kemudi/data/axes.json`, and its check used the other half. `python tools/judge_fresh.py` scores
+48 new sentences per judged knob (24 per pole) with the judge and those numbers frozen. The
+sentences are in `tools/fresh_sentences.json`. They were written by three hosted language models
+other than the one being steered, after the judge was fixed, and all 144 were kept. Rule: an AUC
+of at least 0.90, the limit the main measurement uses.
+
+<!-- judge_fresh:start -->
+| Axis | Fresh sentences | AUC on fresh sentences | Accuracy with the frozen zero point | AUC on the first labelled set | Passes (AUC at least 0.90) |
+|---|---|---|---|---|---|
+| mood | 48 | 0.948 | 0.833 | 0.914 | yes |
+| tension | 48 | 0.863 | 0.708 | 0.945 | no |
+| register | 48 | 0.995 | 0.958 | 1.000 | yes |
+<!-- judge_fresh:end -->
+
+Mood and register pass. **Tension does not**: 0.863 on the fresh sentences against 0.945 on the
+first set, with 71% of the fresh sentences on the correct side. By the rule of the main
+measurement a judge below 0.90 means "effect not validated". The tension numbers in the tables
+above are left as measured and should be read with this in mind: the tension judge is weaker
+than its first check said. The blind rating below is a second look at the same texts that
+does not use this judge.
+
+### Blind rating
+
+`python tools/blind_rating.py make` pairs each dose-0 text with the steered text for the same
+opening and seed, at both ends of each knob's usable range: 128 pairs in a shuffled order, with
+the dose hidden. The rater answers one question per pair, for example "Which text is more
+hopeful?". Rule: a knob end passes when the majority of the raters picks the intended text in at
+least 12 of 16 pairs. Chance does that about 4 times in 100.
+
+**No person has rated the texts yet.** The three raters so far are hosted language models other
+than the one being steered, reached through a private gateway. Each saw the pairs and never the
+key. To add a human rating, run `python tools/blind_rating.py ask yourname` and then
+`python tools/blind_rating.py score`. The pairs, the key and the answers are in `docs/rating`.
+
+<!-- rating:start -->
+| Axis | Dose | Rater 1 | Rater 2 | Rater 3 | Majority | Passes (12 of 16) |
+|---|---|---|---|---|---|---|
+| mood | -0.30 | 15 of 16 | 15 of 16 | 14 of 16 | 15 of 16 | yes |
+| mood | +0.45 | 13 of 16 | 13 of 16 | 12 of 16 | 13 of 16 | yes |
+| register | -0.15 | 14 of 16 | 14 of 16 | 14 of 16 | 15 of 16 | yes |
+| register | +0.15 | 12 of 16 | 14 of 16 | 12 of 16 | 13 of 16 | yes |
+| speech | -0.45 | 9 of 16 | 9 of 16 | 10 of 16 | 8 of 16 | no |
+| speech | +0.15 | 11 of 16 | 12 of 16 | 12 of 16 | 11 of 16 | no |
+| tension | -0.30 | 12 of 16 | 14 of 16 | 13 of 16 | 13 of 16 | yes |
+| tension | +0.15 | 14 of 16 | 14 of 16 | 13 of 16 | 14 of 16 | yes |
+<!-- rating:end -->
+
+Mood, tension and register pass at both ends. Speech fails at both: at -0.45 the majority
+picked the intended text in 8 of 16 pairs, which is what chance gives, and at +0.15 in
+11 of 16. That agrees with the paired check, which found no clear speech effect inside its
+usable range. For tension, whose judge failed above, raters that never used that judge picked
+the intended text in 13 and 14 of 16 pairs. The raters are language models, so this is a
+second opinion from models and not a human one.
+
+The rule of 12 of 16 does not correct for making eight tests. With a Bonferroni correction the
+bar would be 14 of 16, and 3 of the 6 passing ends reach it (mood -0.30, register -0.15, tension +0.15).
+This stricter reading was added after the rating and is not the pre-set rule.
+
+### Two knobs together
+
+The usable ranges above were measured with one knob on. `python tools/pair_knobs.py` turns on
+two: for each of the six pairs, the four corners where each knob sits at one end of its own
+usable range, with the same 16 openings, seed and settings (24 corners, 384 texts, in
+`pairs_samples.json`). Rules: a corner is fluent under the two limits of the main measurement,
+and a knob still works next to another when, at each end of the other knob, the paired
+difference between its own high end and its own low end has a 95% interval above zero.
+
+<!-- pairs:start -->
+| Knobs | Fluent in all four corners | Highest perplexity ratio | Lowest distinct-2 ratio |
+|---|---|---|---|
+| mood + tension | no | 2.47 | 0.98 |
+| mood + register | no | 2.24 | 0.98 |
+| mood + speech | no | 2.08 | 0.96 |
+| tension + register | yes | 1.30 | 0.99 |
+| tension + speech | no | 1.73 | 0.98 |
+| register + speech | no | 1.51 | 0.99 |
+
+| Knob | Next to | High end minus low end, alone | Other knob at its low end | Other knob at its high end | Still works |
+|---|---|---|---|---|---|
+| mood | tension | +0.336 (+0.276 to +0.407) | +0.311 (+0.243 to +0.374) | +0.304 (+0.246 to +0.359) | yes |
+| tension | mood | +0.123 (+0.084 to +0.166) | +0.071 (+0.044 to +0.102) | +0.070 (+0.037 to +0.100) | yes |
+| mood | register | +0.336 (+0.276 to +0.407) | +0.308 (+0.237 to +0.385) | +0.307 (+0.245 to +0.369) | yes |
+| register | mood | +0.058 (+0.037 to +0.082) | +0.078 (+0.051 to +0.105) | +0.093 (+0.054 to +0.130) | yes |
+| mood | speech | +0.336 (+0.276 to +0.407) | +0.331 (+0.278 to +0.387) | +0.299 (+0.240 to +0.367) | yes |
+| speech | mood | +0.042 (+0.000 to +0.110) | +0.003 (+0.000 to +0.008) | +0.229 (+0.102 to +0.381) | no |
+| tension | register | +0.123 (+0.084 to +0.166) | +0.086 (+0.048 to +0.126) | +0.076 (+0.040 to +0.109) | yes |
+| register | tension | +0.058 (+0.037 to +0.082) | +0.067 (+0.049 to +0.084) | +0.038 (+0.013 to +0.066) | yes |
+| tension | speech | +0.123 (+0.084 to +0.166) | +0.114 (+0.084 to +0.147) | +0.112 (+0.076 to +0.152) | yes |
+| speech | tension | +0.042 (+0.000 to +0.110) | +0.118 (+0.041 to +0.206) | +0.143 (+0.070 to +0.225) | yes |
+| register | speech | +0.058 (+0.037 to +0.082) | +0.083 (+0.056 to +0.114) | +0.058 (+0.032 to +0.086) | yes |
+| speech | register | +0.042 (+0.000 to +0.110) | +0.147 (+0.042 to +0.269) | +0.000 (+0.000 to +0.000) | no |
+<!-- pairs:end -->
+
+**The green bands do not add up.** Only tension with register stays fluent in all four
+corners. Over the six pairs, 12 of the 24 corners are fluent, and every corner with mood at
++0.45 is past the perplexity limit (ratios from 1.51 to 2.47). Repetition is not the
+problem: the lowest distinct-2 ratio is 0.96.
+
+The effect itself survives. Mood, tension and register still work next to every other knob, by
+the rule above. Tension's effect is smaller next to mood (+0.07 against +0.12 alone) and stays
+clear. Speech depends on its neighbour: it passes next to tension only, and it does not pass
+alone either.
+
+In practice: with two knobs on, stay well inside both bands, or use tension with register.
+The app shows what was measured for the pair you have turned on. Only the corners were
+measured. Doses inside the bands with two knobs on, and three or more knobs together, were not.
+
+### A second machine
+
+`kemudi reproduce` was run from an empty folder on a second machine: a GitHub-hosted Linux
+runner (workflow `reproduce.yml`, started by hand) with Ubuntu 26.04, an AMD EPYC processor
+with 4 cores, Python 3.12 and torch 2.15.0. The published numbers come from a Windows 10 laptop
+with an Intel processor, Python 3.13 and the same torch version. The run took 1 hour 12
+minutes. No pass rule was set in advance: this is a report. The files that run produced are
+in `docs/second_machine`, and `python tools/compare_reproduce.py docs/second_machine` gives:
+
+<!-- reproduce:start -->
+#### Vectors
+| Vector | Cosine with the shipped one | Largest difference in one number |
+|---|---|---|
+| mood | 1.000000 | 5.85e-07 |
+| tension | 1.000000 | 9.91e-07 |
+| register | 1.000000 | 4.62e-07 |
+| speech | 1.000000 | 7.53e-07 |
+
+#### Generated texts
+| Axis | Texts | Same as shipped, to the letter |
+|---|---|---|
+| mood | 272 | 272 |
+| tension | 272 | 272 |
+| speech | 272 | 272 |
+| register | 272 | 272 |
+
+#### Published numbers
+600 numbers compared, 590 equal, 10 different, 0 present on one side only.
+
+- mood: usable range [-0.3, 0.45] shipped, [-0.3, 0.45] fresh; held-out AUC 0.953 and 0.953; largest move of a dose effect 0.0000
+- tension: usable range [-0.3, 0.15] shipped, [-0.3, 0.15] fresh; held-out AUC 0.969 and 0.969; largest move of a dose effect 0.0000
+- register: usable range [-0.15, 0.15] shipped, [-0.15, 0.15] fresh; held-out AUC 1.0 and 1.0; largest move of a dose effect 0.0000
+- speech: usable range [-0.45, 0.15] shipped, [-0.45, 0.15] fresh; held-out AUC 1.0 and 1.0; largest move of a dose effect 0.0000
+
+| Largest differences | Shipped | Fresh |
+|---|---|---|
+| `/axes/mood/prompt/2/effect_ci/1` | 0.4882 | 0.4881 |
+| `/axes/tension/steering/4/effect_ci/1` | 0.3789 | 0.3788 |
+| `/axes/mood/prompt/3/effect` | 0.6929 | 0.693 |
+| `/axes/speech/gauge_mid` | -0.528063 | -0.52806 |
+| `/axes/tension/gauge_mid` | 0.517654 | 0.517652 |
+| `/axes/register/gauge_mid` | 0.238046 | 0.238047 |
+| `/axes/speech/gauge_half` | 0.492824 | 0.492824 |
+| `/axes/register/gauge_half` | 1.19809 | 1.19809 |
+| `/axes/mood/gauge_mid` | -0.0721107 | -0.0721108 |
+| `/axes/tension/gauge_half` | 0.687407 | 0.687407 |
+<!-- reproduce:end -->
+
+All 1,088 generated texts are the same to the letter. Of the 600 published numbers, 590 are
+equal and 10 differ: three by 0.0001, in the fourth decimal, and seven gauge constants in the
+sixth decimal or later. No usable range, no held-out AUC and no mean effect of a vector dose
+moved. The vectors differ by less than 0.000001 in any one number.
+
+This shows that the pipeline gives the same result on another processor and operating system
+with the same torch version. It does not show what another torch version, a GPU or another
+seed would give, and it is not a second sample.
+
 ## How it works
 
 1. **Find a direction.** Sixteen story openings are each written under two opposite style
@@ -258,8 +450,7 @@ the three commands run separately (see "How the runs were made" below). Afterwar
 the same package versions. It took 1 hour 58 minutes on a laptop CPU that was busy with other
 work, and it gave back the shipped vectors and `calibration.json` byte for byte, the same
 1,088 texts and the same report files. That shows the pipeline repeats itself on one machine.
-It was not run on a second machine, where small floating-point differences could change some
-of the texts.
+The run on a second machine is under "A second machine" above.
 
 ## What was fixed in advance, and what changed on the way
 
@@ -293,6 +484,12 @@ Changed on the way, in order:
   scratch, and the nine dose results came out the same to four decimals. This shows that the
   pipeline repeats itself on one machine. It is not a second sample.
 
+- **Four checks after the first release**: the judge on fresh sentences, the blind rating, two
+  knobs together and the run on a second machine. Their rules were written before they ran,
+  and they changed no rule and no number in the results table. `paired.json` extends the paired
+  check from the two usable ends to every dose with the same code; the app reads it for the
+  note under each slider.
+
 ## Kemudi and Spaceship
 
 [Spaceship](https://github.com/chuanqisun/spaceship) by Chuanqi Sun is the idea this project
@@ -325,9 +522,13 @@ Spaceship's `CONTROLS` block and is not a test of Spaceship, which uses a far la
 - **Small sample.** 16 openings, 48 tokens each, one random seed, English, story continuation
   only. The intervals in the charts and in the dose table are bootstrap intervals over those 16
   texts.
-- **The judge is the model itself.** No person rated the texts. The judge passed its check on
-  hand-written sentences, and for tension it put only 75% of the held-out ones on the correct
-  side, so single texts are scored loosely and only averages should be read.
+- **The judge is the model itself, and no person rated the texts.** The judge passed its
+  check on hand-written sentences, and for tension it put only 75% of the held-out ones on the
+  correct side. On 48 fresh sentences the tension judge then fell below the 0.90 limit
+  (0.863), so the tension numbers rest on a weaker judge than the first check said.
+  Three other language models picked the intended text blind for mood, tension and register,
+  and not for speech. That is a second opinion from models. Single texts are scored loosely
+  and only averages should be read.
 - **The judge is built like the prompt control** (both are an instruction in the system
   prompt). If that favours anything, it favours the prompt control.
 - **The fluency limit punishes style change.** Perplexity is counted against what the
@@ -338,8 +539,12 @@ Spaceship's `CONTROLS` block and is not a test of Spaceship, which uses a far la
   continuing the story and do not continue it: 3 inside the usable ranges and 8 past them. The same
   search finds none among the random-direction and prompt-control texts. These texts stay in
   the averages. The count was made once, after the measurement, and no test checks it.
-- **One knob at a time.** Each knob was measured alone. The app lets you turn several at once
-  and shows a warning when two or more are on; what combinations do was not measured.
+- **Bands are for one knob.** At the corners of two bands the text stayed fluent for one pair
+  of six (tension with register). Doses inside the bands with two knobs on, and three or more
+  knobs together, were not measured.
+- **Same software on both machines.** The second machine had another processor, operating
+  system and Python version, and the same torch version. Another torch version, a GPU and
+  another seed were not tried.
 - **Block 14 is the edge of the allowed band** for all four knobs. Later blocks were not tried.
 - **The gauges are a readout, not a result.** They show the model's state along the vector and
   were not tested as a measure of the text.
@@ -367,11 +572,19 @@ pip install -e ".[dev]"
 pytest
 ```
 
-The tests run without the model: fake engines stand in for it, and one test checks that the
-results table, the dose table, the sample texts and the echo count in this README are exactly
-what the shipped calibration produces. CI runs the tests and then starts the app with
-`start-kemudi.sh` on Linux and on macOS. `python tools/mutation_check.py` breaks the code in six places on a copy
-and confirms that the tests notice each one.
+The tests run without the model: fake engines stand in for it, and one test checks that every
+table, the sample texts and the echo count in this README are exactly what the shipped files
+produce. A browser test drives the real page against the real server with a stand-in engine: the
+note under each slider, the note for two knobs, and a knob moved while the text streams. It needs
+`python -m playwright install chromium` once; without the browser it is skipped on your machine,
+and in CI a missing browser fails the run. CI runs the tests and then starts the app with
+the start scripts on Linux, macOS and Windows. `python tools/mutation_check.py` breaks the code in nine
+places on a copy and confirms that the tests notice each one.
+
+The follow-up tools are in `tools`: `paired_check.py`, `judge_fresh.py`, `blind_rating.py`,
+`pair_knobs.py` and `compare_reproduce.py`. The first, second and fourth need the model. The files
+the second machine produced are in `docs/second_machine`, and a test checks the comparison
+table against them.
 
 ## Licence and credit
 

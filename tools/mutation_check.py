@@ -41,6 +41,24 @@ MUTATIONS = [
         "noise = noise - (noise @ axis.unit) * axis.unit",
         "noise = noise + 50 * axis.unit",
     ),
+    (
+        "the paired check calls a change in the wrong direction clear",
+        "tools/paired_check.py",
+        '"clear": bool(average * dose > 0 and low * high > 0),',
+        '"clear": bool(low * high > 0),',
+    ),
+    (
+        "a corner of two knobs counts as fluent whatever its perplexity",
+        "tools/pair_knobs.py",
+        '"fluent": bool(ratio <= settings["max_perplexity_ratio"] and distinct_ratio >= settings["min_distinct_ratio"]),',
+        '"fluent": bool(distinct_ratio >= settings["min_distinct_ratio"]),',
+    ),
+    (
+        "the page reports every measured dose as a clear effect (needs the browser test)",
+        "kemudi/web/index.html",
+        "  return row.clear\n",
+        "  return true\n",
+    ),
 ]
 
 

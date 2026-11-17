@@ -16,7 +16,11 @@ jobs:
         run: |
           pip install torch --index-url https://download.pytorch.org/whl/cpu
           pip install -e ".[dev]"
+          python -m playwright install --with-deps chromium
       - name: Test
+        # With this set, a missing browser fails the page tests instead of skipping them.
+        env:
+          KEMUDI_REQUIRE_BROWSER: "1"
         run: pytest -q
 
   launcher:
@@ -24,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 25
     steps:
@@ -33,6 +37,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Start the app and wait for it to answer
+        if: runner.os != 'Windows'
         run: |
           ./start-kemudi.sh > launcher.log 2>&1 &
           for attempt in $(seq 1 180); do
@@ -42,4 +47,28 @@ jobs:
           cat launcher.log
           python3 -c "import json; info = json.load(open('info.json')); assert len(info['summary']['axes']) == 4, info"
       - name: Write a steered sentence
+        if: runner.os != 'Windows'
         run: .venv/bin/python -m kemudi say "The lighthouse keeper climbed the stairs" --knob mood=0.3 --tokens 24
+      - name: Start the app with the Windows script and wait for it to answer
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $launcher = Start-Process -FilePath cmd.exe -ArgumentList '/c "Start Kemudi.cmd"' -RedirectStandardOutput launcher.log -RedirectStandardError launcher.err -PassThru
+          $answered = $false
+          foreach ($attempt in 1..180) {
+            try {
+              Invoke-WebRequest -Uri http://127.0.0.1:8765/api/info -OutFile info.json -ErrorAction Stop
+              $answered = $true
+              break
+            } catch {
+              Start-Sleep -Seconds 5
+            }
+          }
+          Get-Content launcher.log, launcher.err -ErrorAction SilentlyContinue
+          if (-not $answered) { throw "The app did not answer." }
+          taskkill /PID $launcher.Id /T /F | Out-Null
+          python -c "import json; info = json.load(open('info.json')); assert len(info['summary']['axes']) == 4, info"
+      - name: Write a steered sentence on Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: .venv\Scripts\python.exe -m kemudi say "The lighthouse keeper climbed the stairs" --knob mood=0.3 --tokens 24

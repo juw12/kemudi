@@ -1,0 +1,780 @@
+{
+ "openings": 16,
+ "seed": 1234,
+ "pairs": [
+  {
+   "knobs": [
+    "mood",
+    "tension"
+   ],
+   "corners": [
+    {
+     "doses": {
+      "mood": -0.3,
+      "tension": -0.3
+     },
+     "perplexity_ratio": 1.131,
+     "distinct_ratio": 0.982,
+     "fluent": true,
+     "effect": {
+      "mood": 0.4108,
+      "tension": 0.3299
+     }
+    },
+    {
+     "doses": {
+      "mood": -0.3,
+      "tension": 0.15
+     },
+     "perplexity_ratio": 1.647,
+     "distinct_ratio": 0.986,
+     "fluent": false,
+     "effect": {
+      "mood": 0.3505,
+      "tension": 0.4008
+     }
+    },
+    {
+     "doses": {
+      "mood": 0.45,
+      "tension": -0.3
+     },
+     "perplexity_ratio": 2.468,
+     "distinct_ratio": 1.004,
+     "fluent": false,
+     "effect": {
+      "mood": 0.7216,
+      "tension": 0.2914
+     }
+    },
+    {
+     "doses": {
+      "mood": 0.45,
+      "tension": 0.15
+     },
+     "perplexity_ratio": 1.568,
+     "distinct_ratio": 1.005,
+     "fluent": false,
+     "effect": {
+      "mood": 0.654,
+      "tension": 0.3609
+     }
+    }
+   ],
+   "fluent_together": false,
+   "effects": [
+    {
+     "knob": "mood",
+     "next_to": "tension",
+     "alone": {
+      "difference": 0.3361,
+      "interval": [
+       0.2756,
+       0.4071
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.3,
+       "difference": 0.3108,
+       "interval": [
+        0.2433,
+        0.3738
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.3036,
+       "interval": [
+        0.2458,
+        0.3589
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    },
+    {
+     "knob": "tension",
+     "next_to": "mood",
+     "alone": {
+      "difference": 0.1235,
+      "interval": [
+       0.084,
+       0.1661
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.3,
+       "difference": 0.0709,
+       "interval": [
+        0.0436,
+        0.1023
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.45,
+       "difference": 0.0696,
+       "interval": [
+        0.0368,
+        0.1004
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    }
+   ]
+  },
+  {
+   "knobs": [
+    "mood",
+    "register"
+   ],
+   "corners": [
+    {
+     "doses": {
+      "mood": -0.3,
+      "register": -0.15
+     },
+     "perplexity_ratio": 1.1,
+     "distinct_ratio": 0.987,
+     "fluent": true,
+     "effect": {
+      "mood": 0.3882,
+      "register": 0.4727
+     }
+    },
+    {
+     "doses": {
+      "mood": -0.3,
+      "register": 0.15
+     },
+     "perplexity_ratio": 1.559,
+     "distinct_ratio": 0.984,
+     "fluent": false,
+     "effect": {
+      "mood": 0.3348,
+      "register": 0.5503
+     }
+    },
+    {
+     "doses": {
+      "mood": 0.45,
+      "register": -0.15
+     },
+     "perplexity_ratio": 2.24,
+     "distinct_ratio": 1.003,
+     "fluent": false,
+     "effect": {
+      "mood": 0.6962,
+      "register": 0.4211
+     }
+    },
+    {
+     "doses": {
+      "mood": 0.45,
+      "register": 0.15
+     },
+     "perplexity_ratio": 1.515,
+     "distinct_ratio": 0.989,
+     "fluent": false,
+     "effect": {
+      "mood": 0.6416,
+      "register": 0.5139
+     }
+    }
+   ],
+   "fluent_together": false,
+   "effects": [
+    {
+     "knob": "mood",
+     "next_to": "register",
+     "alone": {
+      "difference": 0.3361,
+      "interval": [
+       0.2756,
+       0.4071
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.15,
+       "difference": 0.308,
+       "interval": [
+        0.2369,
+        0.385
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.3068,
+       "interval": [
+        0.2455,
+        0.3688
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    },
+    {
+     "knob": "register",
+     "next_to": "mood",
+     "alone": {
+      "difference": 0.0583,
+      "interval": [
+       0.0371,
+       0.0816
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.3,
+       "difference": 0.0776,
+       "interval": [
+        0.0506,
+        0.105
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.45,
+       "difference": 0.0927,
+       "interval": [
+        0.0541,
+        0.1296
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    }
+   ]
+  },
+  {
+   "knobs": [
+    "mood",
+    "speech"
+   ],
+   "corners": [
+    {
+     "doses": {
+      "mood": -0.3,
+      "speech": -0.45
+     },
+     "perplexity_ratio": 1.512,
+     "distinct_ratio": 0.986,
+     "fluent": false,
+     "effect": {
+      "mood": 0.3211,
+      "speech": 0.0
+     }
+    },
+    {
+     "doses": {
+      "mood": -0.3,
+      "speech": 0.15
+     },
+     "perplexity_ratio": 1.441,
+     "distinct_ratio": 0.964,
+     "fluent": true,
+     "effect": {
+      "mood": 0.3804,
+      "speech": 0.0027
+     }
+    },
+    {
+     "doses": {
+      "mood": 0.45,
+      "speech": -0.45
+     },
+     "perplexity_ratio": 1.8,
+     "distinct_ratio": 1.003,
+     "fluent": false,
+     "effect": {
+      "mood": 0.6523,
+      "speech": 0.0
+     }
+    },
+    {
+     "doses": {
+      "mood": 0.45,
+      "speech": 0.15
+     },
+     "perplexity_ratio": 2.077,
+     "distinct_ratio": 0.997,
+     "fluent": false,
+     "effect": {
+      "mood": 0.6791,
+      "speech": 0.2288
+     }
+    }
+   ],
+   "fluent_together": false,
+   "effects": [
+    {
+     "knob": "mood",
+     "next_to": "speech",
+     "alone": {
+      "difference": 0.3361,
+      "interval": [
+       0.2756,
+       0.4071
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.45,
+       "difference": 0.3312,
+       "interval": [
+        0.2783,
+        0.3867
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.2987,
+       "interval": [
+        0.2401,
+        0.3671
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    },
+    {
+     "knob": "speech",
+     "next_to": "mood",
+     "alone": {
+      "difference": 0.042,
+      "interval": [
+       0.0,
+       0.1099
+      ],
+      "above_zero": false
+     },
+     "with_other": [
+      {
+       "other_dose": -0.3,
+       "difference": 0.0027,
+       "interval": [
+        0.0,
+        0.0082
+       ],
+       "above_zero": false
+      },
+      {
+       "other_dose": 0.45,
+       "difference": 0.2288,
+       "interval": [
+        0.1018,
+        0.3806
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": false
+    }
+   ]
+  },
+  {
+   "knobs": [
+    "tension",
+    "register"
+   ],
+   "corners": [
+    {
+     "doses": {
+      "tension": -0.3,
+      "register": -0.15
+     },
+     "perplexity_ratio": 1.296,
+     "distinct_ratio": 1.0,
+     "fluent": true,
+     "effect": {
+      "tension": 0.2725,
+      "register": 0.446
+     }
+    },
+    {
+     "doses": {
+      "tension": -0.3,
+      "register": 0.15
+     },
+     "perplexity_ratio": 1.17,
+     "distinct_ratio": 0.995,
+     "fluent": true,
+     "effect": {
+      "tension": 0.3195,
+      "register": 0.5132
+     }
+    },
+    {
+     "doses": {
+      "tension": 0.15,
+      "register": -0.15
+     },
+     "perplexity_ratio": 1.199,
+     "distinct_ratio": 0.994,
+     "fluent": true,
+     "effect": {
+      "tension": 0.3582,
+      "register": 0.4992
+     }
+    },
+    {
+     "doses": {
+      "tension": 0.15,
+      "register": 0.15
+     },
+     "perplexity_ratio": 1.149,
+     "distinct_ratio": 0.987,
+     "fluent": true,
+     "effect": {
+      "tension": 0.3952,
+      "register": 0.5378
+     }
+    }
+   ],
+   "fluent_together": true,
+   "effects": [
+    {
+     "knob": "tension",
+     "next_to": "register",
+     "alone": {
+      "difference": 0.1235,
+      "interval": [
+       0.084,
+       0.1661
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.15,
+       "difference": 0.0856,
+       "interval": [
+        0.048,
+        0.1263
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.0757,
+       "interval": [
+        0.0398,
+        0.109
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    },
+    {
+     "knob": "register",
+     "next_to": "tension",
+     "alone": {
+      "difference": 0.0583,
+      "interval": [
+       0.0371,
+       0.0816
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.3,
+       "difference": 0.0672,
+       "interval": [
+        0.0487,
+        0.0844
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.0385,
+       "interval": [
+        0.0125,
+        0.0662
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    }
+   ]
+  },
+  {
+   "knobs": [
+    "tension",
+    "speech"
+   ],
+   "corners": [
+    {
+     "doses": {
+      "tension": -0.3,
+      "speech": -0.45
+     },
+     "perplexity_ratio": 1.726,
+     "distinct_ratio": 0.99,
+     "fluent": false,
+     "effect": {
+      "tension": 0.2616,
+      "speech": 0.0
+     }
+    },
+    {
+     "doses": {
+      "tension": -0.3,
+      "speech": 0.15
+     },
+     "perplexity_ratio": 1.345,
+     "distinct_ratio": 1.001,
+     "fluent": true,
+     "effect": {
+      "tension": 0.2966,
+      "speech": 0.1179
+     }
+    },
+    {
+     "doses": {
+      "tension": 0.15,
+      "speech": -0.45
+     },
+     "perplexity_ratio": 1.339,
+     "distinct_ratio": 0.987,
+     "fluent": true,
+     "effect": {
+      "tension": 0.3755,
+      "speech": 0.0
+     }
+    },
+    {
+     "doses": {
+      "tension": 0.15,
+      "speech": 0.15
+     },
+     "perplexity_ratio": 1.717,
+     "distinct_ratio": 0.983,
+     "fluent": false,
+     "effect": {
+      "tension": 0.4087,
+      "speech": 0.1426
+     }
+    }
+   ],
+   "fluent_together": false,
+   "effects": [
+    {
+     "knob": "tension",
+     "next_to": "speech",
+     "alone": {
+      "difference": 0.1235,
+      "interval": [
+       0.084,
+       0.1661
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.45,
+       "difference": 0.1139,
+       "interval": [
+        0.0835,
+        0.1471
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.112,
+       "interval": [
+        0.0765,
+        0.1523
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    },
+    {
+     "knob": "speech",
+     "next_to": "tension",
+     "alone": {
+      "difference": 0.042,
+      "interval": [
+       0.0,
+       0.1099
+      ],
+      "above_zero": false
+     },
+     "with_other": [
+      {
+       "other_dose": -0.3,
+       "difference": 0.1179,
+       "interval": [
+        0.0414,
+        0.2057
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.1426,
+       "interval": [
+        0.0695,
+        0.2247
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    }
+   ]
+  },
+  {
+   "knobs": [
+    "register",
+    "speech"
+   ],
+   "corners": [
+    {
+     "doses": {
+      "register": -0.15,
+      "speech": -0.45
+     },
+     "perplexity_ratio": 1.238,
+     "distinct_ratio": 0.989,
+     "fluent": true,
+     "effect": {
+      "register": 0.4779,
+      "speech": 0.0
+     }
+    },
+    {
+     "doses": {
+      "register": -0.15,
+      "speech": 0.15
+     },
+     "perplexity_ratio": 1.398,
+     "distinct_ratio": 0.995,
+     "fluent": true,
+     "effect": {
+      "register": 0.4891,
+      "speech": 0.1472
+     }
+    },
+    {
+     "doses": {
+      "register": 0.15,
+      "speech": -0.45
+     },
+     "perplexity_ratio": 1.507,
+     "distinct_ratio": 0.994,
+     "fluent": false,
+     "effect": {
+      "register": 0.561,
+      "speech": 0.0
+     }
+    },
+    {
+     "doses": {
+      "register": 0.15,
+      "speech": 0.15
+     },
+     "perplexity_ratio": 1.335,
+     "distinct_ratio": 0.986,
+     "fluent": true,
+     "effect": {
+      "register": 0.5472,
+      "speech": 0.0
+     }
+    }
+   ],
+   "fluent_together": false,
+   "effects": [
+    {
+     "knob": "register",
+     "next_to": "speech",
+     "alone": {
+      "difference": 0.0583,
+      "interval": [
+       0.0371,
+       0.0816
+      ],
+      "above_zero": true
+     },
+     "with_other": [
+      {
+       "other_dose": -0.45,
+       "difference": 0.0831,
+       "interval": [
+        0.0556,
+        0.1143
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.0581,
+       "interval": [
+        0.0321,
+        0.0858
+       ],
+       "above_zero": true
+      }
+     ],
+     "still_works": true
+    },
+    {
+     "knob": "speech",
+     "next_to": "register",
+     "alone": {
+      "difference": 0.042,
+      "interval": [
+       0.0,
+       0.1099
+      ],
+      "above_zero": false
+     },
+     "with_other": [
+      {
+       "other_dose": -0.15,
+       "difference": 0.1472,
+       "interval": [
+        0.042,
+        0.269
+       ],
+       "above_zero": true
+      },
+      {
+       "other_dose": 0.15,
+       "difference": 0.0,
+       "interval": [
+        0.0,
+        0.0
+       ],
+       "above_zero": false
+      }
+     ],
+     "still_works": false
+    }
+   ]
+  }
+ ]
+}
