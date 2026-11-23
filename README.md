@@ -15,7 +15,7 @@ of what it does to the text and the dose at which the text breaks.
 - **Android:** [`kemudi-android.apk`](https://github.com/juw12/kemudi/releases/download/android/kemudi-android.apk): open the file on the phone and allow your browser to install apps once.
 - **iPhone:** open https://juw12.github.io/kemudi/ in Safari, tap Share, then **Add to Home Screen**.
 
-The Windows, Mac and Android apps are the web app in its own window ([`desktop/`](desktop/README.md), [`android/`](android/README.md)) and change with it. Each build is opened on GitHub's machines before it is published: on Windows and on a Mac the page loads, the app starts and can store data; on an Android emulator it installs, opens and stays up. They are not code-signed or notarised, and no real phone or PC has run them yet.
+The Windows, Mac and Android apps open the kemudi guide (https://juw12.github.io/kemudi/: this README laid out for a phone, readable without a connection) in its own window ([`desktop/`](desktop/README.md), [`android/`](android/README.md)) and change with it. kemudi itself runs on a computer and is installed the way this README says; the apps do not contain it. Each build is opened on GitHub's machines before it is published: on Windows and on a Mac the page loads, the app starts and can store data; on an Android emulator it installs, opens and stays up. They are not code-signed or notarised, and no real phone or PC has run them yet.
 
 ## What you get
 
