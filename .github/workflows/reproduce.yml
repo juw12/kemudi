@@ -4,6 +4,9 @@ name: reproduce
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   reproduce:
     runs-on: ubuntu-latest
